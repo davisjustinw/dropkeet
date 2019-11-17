@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: dropkeet_development
+  username: dropkeet
+  password: <%= ENV['DROPKEET_DATABASE_PASSWORD'] %>
+
+test:
+  <<: *default
+  database: dropkeet_test
+  username: dropkeet
+  password: <%= ENV['DROPKEET_DATABASE_PASSWORD'] %>
+
+production:
+  <<: *default
+  database: dropkeet_production
+  username: dropkeet
+  password: <%= ENV['DROPKEET_DATABASE_PASSWORD'] %>
