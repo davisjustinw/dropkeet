@@ -1,11 +1,14 @@
 <%- if devise_mapping.omniauthable? %>
   <%- resource_class.omniauth_providers.each do |provider| %>
+  <p>
     <%= button_to omniauth_authorize_path(resource_name, provider), class: "button" do %>
       <span class="icon">
         <i class="fab fa-google"></i>
       </span>
-      <span>Google</span>
+      <span>Use Google</span>
     <% end %>
+  </p>
+
 
   <% end %>
 <% end %>
