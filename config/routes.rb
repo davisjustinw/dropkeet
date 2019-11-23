@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  resources :item_hash_tags
+  resources :hash_tags
+  resources :inventory_users
+  resources :inventories
+  resources :customers
+  resources :scissors
+  resources :rocks
+  resources :papers
   resources :item_tags
   resources :template_tags
   resources :entry_tags

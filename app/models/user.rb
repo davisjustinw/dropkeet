@@ -3,7 +3,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :validatable, :omniauthable, :omniauth_providers => [:google_oauth2]
-
+  has_many :inventory_users
+  has_many :inventories, through: :inventory_users
   def self.from_omniauth(auth)
 
     # Either create a User record or update it based on the provider (Google) and the UID

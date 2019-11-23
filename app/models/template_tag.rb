@@ -1,2 +1,0 @@
-class TemplateTag < ApplicationRecord
-end

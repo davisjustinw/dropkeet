@@ -1,8 +1,8 @@
 class CreateLocations < ActiveRecord::Migration[6.0]
   def change
     create_table :locations do |t|
-      t.string :name
-      t.integer :location_id
+      t.integer :parent_id
+      t.integer :child_id
 
       t.timestamps
     end

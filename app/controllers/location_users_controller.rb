@@ -1,2 +1,0 @@
-class LocationUsersController < ApplicationController
-end

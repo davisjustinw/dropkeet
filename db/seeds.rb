@@ -23,6 +23,7 @@ puts "There are now #{Location.count} rows in the Location table"
 csv_path = Pathname( Rails.root.join('lib', 'seeds', 'items.csv') )
 
 if csv_path.exist?
+  # Adult NC,category:airway,bls
   puts 'Seeding items...'
   csv_text = File.read csv_path
   csv = CSV.parse( csv_text, :headers => true, :encoding => 'ISO-8859-1' )

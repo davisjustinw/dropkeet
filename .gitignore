@@ -32,3 +32,5 @@ yarn-debug.log*
 
 .env
 drop_keet_setup.md
+dev_log.md
+notes.md
