@@ -5,11 +5,11 @@ require 'csv'
 csv_path = Pathname( Rails.root.join('lib', 'seeds', 'locations.csv') )
 
 if csv_path.exist?
-  puts 'Seeding locations...'
+  puts 'Seeding Inventorys ...'
   csv_text = File.read csv_path
   csv = CSV.parse( csv_text, :headers => true, :encoding => 'ISO-8859-1' )
   csv.each do |row|
-    l = Location.new
+    l = Inventory.new
     l.name = row['name']
     l.save
   end
@@ -17,13 +17,14 @@ else
   puts 'No /lib/seeds/items.csv present'
 end
 
-puts "There are now #{Location.count} rows in the Location table"
+puts "There are now #{Inventory.count} rows in the Location table"
 
 #build items
 csv_path = Pathname( Rails.root.join('lib', 'seeds', 'items.csv') )
 
 if csv_path.exist?
   # Adult NC,category:airway,bls
+  # name,tag_hash,tag
   puts 'Seeding items...'
   csv_text = File.read csv_path
   csv = CSV.parse( csv_text, :headers => true, :encoding => 'ISO-8859-1' )
@@ -31,6 +32,14 @@ if csv_path.exist?
     i = Item.new
     i.name = row['name']
     i.save
+
+    category, value = row['tag_hash'].split(':')
+    hash_tag = HashTag.find_or_create_by(category: category, value: value)
+    i.hash_tags << hash_tag if hash_tag
+
+    tag = HashTag.find_or_create_by(value: row['tag'])
+    i.hash_tags << tag if tag
+
   end
 else
   puts 'No /lib/seeds/items.csv present'
