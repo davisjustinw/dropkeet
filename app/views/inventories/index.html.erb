@@ -1,0 +1,16 @@
+<div class="tile is-ancestor">
+  <div class="tile is-parent">
+    <% @inventories.each do |inventory| %>
+        <div class="tile is-child">
+          <a href="#">
+          <div class="card">
+            <div class="is-size-4 has-text-centered">
+              <%= inventory.name %>
+            </div>
+            
+          </div>
+          </a>
+        </div>
+    <% end %>
+  </div>
+</div>
