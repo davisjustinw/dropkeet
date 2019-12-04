@@ -1,5 +1,5 @@
 class Inventory < ApplicationRecord
-  slug :name
+  #slug :name
   has_many :parented_locations, foreign_key: :child_id, class_name: 'Location'
   has_many :parents, through: :parented_locations
 
