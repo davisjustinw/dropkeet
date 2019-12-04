@@ -3,15 +3,12 @@
     <% @inventories.each do |inventory| %>
         <div class="tile is-child">
           <%= link_to inventory_path(inventory) do %>
-
-          <div class="card">
-            <div class="is-size-4 has-text-centered">
-              <%= inventory.name %>
+            <div class="card">
+              <div class="is-size-4 has-text-centered">
+                <%= inventory.name %>
+              </div>
             </div>
-
-          </div>
           <% end %>
-
         </div>
     <% end %>
   </div>
