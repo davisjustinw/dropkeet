@@ -11,4 +11,20 @@ class InventoriesController < ApplicationController
     @inventory = Inventory.find(params[:id])
     @items = Item.all
   end
+
+  def new
+    @inventory = Inventory.new
+  end
+
+  def create
+    @inventory = Inventory.create(inventory_params)
+
+    redirect_to inventories_path
+  end
+
+  private
+
+  def inventory_params
+    params.require(:inventory).permit(:name)
+  end
 end
