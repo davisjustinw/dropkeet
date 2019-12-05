@@ -8,5 +8,11 @@ class Inventory < ApplicationRecord
 
   has_many :inventory_items
 
-
+  # come back to this to refine to scope
+  def self.no_parents
+    self.select { |i| i.parents.empty? }
+  end
+  #scope :no_parents, -> {
+  #  binding.pry
+  #}
 end
