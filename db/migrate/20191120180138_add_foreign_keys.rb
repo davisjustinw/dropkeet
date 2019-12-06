@@ -8,7 +8,7 @@ class AddForeignKeys < ActiveRecord::Migration[6.0]
     add_foreign_key :entry_meta_tags, :entries
     add_foreign_key :entry_meta_tags, :meta_tags
     add_foreign_key :meta_templates, :meta_tags
-    add_foreign_key :meta_templates, :inventory_items
+    add_foreign_key :meta_templates, :items
     add_foreign_key :item_hash_tags, :items
     add_foreign_key :item_hash_tags, :hash_tags
   end

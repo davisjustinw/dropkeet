@@ -91,7 +91,7 @@ ActiveRecord::Schema.define(version: 2019_12_04_214111) do
 
   create_table "meta_templates", force: :cascade do |t|
     t.integer "meta_tag_id"
-    t.integer "inventory_item_id"
+    t.integer "item_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -120,6 +120,6 @@ ActiveRecord::Schema.define(version: 2019_12_04_214111) do
   add_foreign_key "inventory_users", "users"
   add_foreign_key "item_hash_tags", "hash_tags"
   add_foreign_key "item_hash_tags", "items"
-  add_foreign_key "meta_templates", "inventory_items"
+  add_foreign_key "meta_templates", "items"
   add_foreign_key "meta_templates", "meta_tags"
 end

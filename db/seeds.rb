@@ -40,9 +40,19 @@ if csv_path.exist?
     tag = HashTag.find_or_create_by(value: row['tag'])
     i.hash_tags << tag if tag
 
+    if row['meta']
+      meta_data = row['meta'].split(', ')
+      meta_data.each do |meta|
+        MetaTag.find_or_create_by(name: meta).tap do |tag|
+          i.meta_tags << tag
+        end
+      end
+    end
   end
 else
   puts 'No /lib/seeds/items.csv present'
 end
 
 puts "There are now #{Item.count} rows in the Item table"
+puts "There are now #{HashTag.count} rows in the HashTag table"
+puts "There are now #{MetaTag.count} rows in the MetaTag table"

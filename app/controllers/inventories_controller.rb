@@ -13,12 +13,13 @@ class InventoriesController < ApplicationController
   end
 
   def new
+    @parent = Inventory.find(params[:parent_id]) if params[:parent_id]
     @inventory = Inventory.new
   end
 
   def create
+    binding.pry
     @inventory = Inventory.create(inventory_params)
-
     redirect_to inventories_path
   end
 
