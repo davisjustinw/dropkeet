@@ -6,4 +6,6 @@ class Item < ApplicationRecord
 
   has_many :meta_templates
   has_many :meta_tags, through: :meta_templates
+
+  scope :sorted, -> { order(:name) }
 end

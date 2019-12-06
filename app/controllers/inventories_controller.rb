@@ -15,6 +15,7 @@ class InventoriesController < ApplicationController
   def new
     @parent = Inventory.find(params[:parent_id]) if params[:parent_id]
     @inventory = Inventory.new
+    @items =
   end
 
   def create
