@@ -1,0 +1,23 @@
+<table class="table">
+  <thead>
+    <tr>
+      
+      <% @inventories.each do |inventory| %>
+        <th>
+          <%= inventory[:name] %>
+        </th>
+      <% end %>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @items.each do |item| %>
+      <tr>
+        <% @inventories.each do |inventory| %>
+          <td>num</td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>

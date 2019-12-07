@@ -8,4 +8,8 @@ class Item < ApplicationRecord
   has_many :meta_tags, through: :meta_templates
 
   scope :sorted, -> { order(:name) }
+
+  def abreviate
+    name.delete("aeiou")
+  end
 end
