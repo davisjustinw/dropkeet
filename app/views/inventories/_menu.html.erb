@@ -1,0 +1,13 @@
+<aside class="menu box">
+  <h2 class="menu-label">Locations</h2>
+  <ul class="menu-list">
+    <% inventories.each do |inventory| %>
+      <li>
+        <%= link_to inventory[:name], inventory_path(inventory) %>
+      </li>
+    <% end %>
+      <li>
+        <%= link_to '+', new_inventory_path, class: "has-text-centered" %>
+      </li>
+  </ul>
+</aside>
