@@ -1,9 +1,27 @@
 
-<div class="card">
-  <div class="is-size-4 has-text-centered">
-    <%= @inventory.name %>
+<div class="columns">
+  <div class="column is-narrow">
+    <%= render :partial => 'menu', :locals => { inventories: @inventories } %>
   </div>
-  <div class="is-size-4 has-text-centered">
-    <%= link_to 'edit', edit_inventory_path %>
+
+  <div class="column">
+    <div class="hero">
+      <div class="hero-body">
+        <h2 class="title"><%= @inventory.name %>
+          <%= link_to edit_inventory_path(@inventory), class: "button is-text" do %>
+            <span class="icon">
+              <i class="fas fa-edit"></i>
+            </span>
+          <% end %>
+        </h2>
+      </div>
+    </div>
+    <div>
+      <% @items.each do |item| %>
+        <div>
+          <%= item.name %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>

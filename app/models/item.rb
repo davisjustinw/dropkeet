@@ -1,5 +1,6 @@
 class Item < ApplicationRecord
   has_many :inventory_items
+  has_many :inventories, through: :inventory_items
 
   has_many :item_hash_tags
   has_many :hash_tags, through: :item_hash_tags
@@ -9,7 +10,11 @@ class Item < ApplicationRecord
 
   scope :sorted, -> { order(:name) }
 
-  def abreviate
-    name.delete("aeiou")
+  scope :names, -> { select(:name, :id) }
+
+  def abbreviate
+    name.delete("aeiouwhy")
   end
+
+
 end

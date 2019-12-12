@@ -1,10 +1,13 @@
 class InventoriesController < ApplicationController
   def index
-    @inventories = Inventory.all
+    @inventories = Inventory.sorted
   end
 
   def show
+    @inventories = Inventory.sorted
     @inventory = Inventory.find(params[:id])
+    
+    @items = @inventory.items
   end
 
   def edit
@@ -13,7 +16,7 @@ class InventoriesController < ApplicationController
   end
 
   def new
-    @inventories = Inventory.all
+    @inventories = Inventory.sorted
     @parent = Inventory.find(params[:parent_id]) if params[:parent_id]
     @inventory = Inventory.new
 

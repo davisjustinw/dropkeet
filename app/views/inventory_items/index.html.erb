@@ -7,7 +7,7 @@
     <tbody>
       <% @items.each do |item| %>
         <%= render partial: 'body_row',
-          locals: { inventories: @inventories, item: item } %>
+          locals: { item: item  } %>
       <% end %>
     </tbody>
 

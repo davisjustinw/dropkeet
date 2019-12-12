@@ -1,0 +1,13 @@
+<tr>
+
+  <td><%= item.name %></td>
+  <% row_items = @inventory_items.by_item(item.id) %>
+  <% raise "fuckit" %>
+  <% @inventories.each do |inventory| %>
+    <td>
+
+        <%= row_items.by_inventory(inventory.id) %>
+
+    </td>
+  <% end %>
+</tr>
