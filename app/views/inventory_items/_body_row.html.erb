@@ -1,13 +1,14 @@
 <tr>
 
   <td><%= item.name %></td>
-  <% row_items = @inventory_items.by_item(item.id) %>
-  <% raise "fuckit" %>
+
   <% @inventories.each do |inventory| %>
     <td>
-
-        <%= row_items.by_inventory(inventory.id) %>
-
+        <% if @inventory_items[item.id] && @inventory_items[item.id][inventory.id] %>
+          <%= @inventory_items[item.id][inventory.id] %>
+        <% else %>
+          <%= "na" %>
+        <% end %>
     </td>
   <% end %>
 </tr>

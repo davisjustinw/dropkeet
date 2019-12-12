@@ -2,7 +2,7 @@ class InventoryItemsController < ApplicationController
 
   def index
 
-    @inventory_items = InventoryItem.includes(:inventory, :item)
+    @inventory_items = InventoryItem.index_hash
     @inventories = Inventory.sorted.names
     @items = Item.sorted.names
 
