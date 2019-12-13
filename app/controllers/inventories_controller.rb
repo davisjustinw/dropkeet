@@ -6,7 +6,7 @@ class InventoriesController < ApplicationController
   def show
     @inventories = Inventory.sorted
     @inventory = Inventory.find(params[:id])
-    
+
     @items = @inventory.items
   end
 
@@ -19,11 +19,9 @@ class InventoriesController < ApplicationController
     @inventories = Inventory.sorted
     @parent = Inventory.find(params[:parent_id]) if params[:parent_id]
     @inventory = Inventory.new
-
   end
 
   def create
-
     @inventory = Inventory.create(inventory_params)
     redirect_to inventories_path
   end

@@ -16,7 +16,7 @@ class InventoryItem < ApplicationRecord
       par = inv_item.par
 
       hash[item_id] = {} if !hash[item_id]
-      hash[item_id][inv_id] = par
+      hash[item_id][inv_id] = { par: par, obj: inv_item }
       hash
     end
   end

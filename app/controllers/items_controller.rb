@@ -1,13 +1,11 @@
 class ItemsController < ApplicationController
-  def index
-    @items = Item.sorted.names.includes(:inventory_items, :inventories)
-    @inventories = Inventory.sorted.names
-    @inventory_items = InventoryItem.all
 
-    #raise "fuck it"
+  def edit
+    @item = Item.find(params[:id])
+    @inventories = Inventory.sorted
   end
 
   def update
-    raise "fuck it"
+    raise "fuckit"
   end
 end

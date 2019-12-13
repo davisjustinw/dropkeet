@@ -1,9 +1,0 @@
-<tr>
-  <td><%= item.name %></td>
-  <% inventories.each do |inventory| %>
-    <td class="has-text-centered">
-      <%= render partial: 'par_link',
-       locals: {inventory: inventory, item: item} %>
-    </td>
-  <% end %>
-</tr>

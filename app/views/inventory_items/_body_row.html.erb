@@ -1,14 +1,14 @@
+
 <tr>
-
-  <td><%= item.name %></td>
-
-  <% @inventories.each do |inventory| %>
     <td>
-        <% if @inventory_items[item.id] && @inventory_items[item.id][inventory.id] %>
-          <%= @inventory_items[item.id][inventory.id] %>
-        <% else %>
-          <%= "na" %>
-        <% end %>
+      <%= link_to edit_item_path(item), class: "button is-text" do %>
+        <%= item.name %>
+      <% end %>
     </td>
-  <% end %>
+    <% @inventories.each do |inventory| %>
+      <td class="has-text-centered">
+        <%= par_value(@inventory_items, inventory, item) %>
+      </td>
+    <% end %>
+
 </tr>
