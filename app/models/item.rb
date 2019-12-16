@@ -6,6 +6,7 @@ class Item < ApplicationRecord
   has_many :tags, through: :item_tags
 
   accepts_nested_attributes_for :item_tags, :allow_destroy => true
+  accepts_nested_attributes_for :tags, reject_if: proc { |attributes| attributes['label'].blank? }
 
   scope :sorted, -> { order(:name) }
   scope :names, -> { select(:name, :id) }

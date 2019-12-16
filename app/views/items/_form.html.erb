@@ -16,6 +16,15 @@
     </div>
   <% end %>
 
+  <%= f.fields_for :tags do |fff| %>
+    <div >
+      <% if !fff.object.persisted? %>
+        <%= fff.label :label %>
+        <%= fff.text_field :label %>
+      <% end %>
+    </div>
+  <% end %>
+
   <div class="field">
     <%= f.submit "create", class: "control button is-primary" %>
   </div>

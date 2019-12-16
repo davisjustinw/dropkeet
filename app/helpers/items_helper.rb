@@ -4,6 +4,7 @@ module ItemsHelper
     (Tag.all - item.tags).each do |tag|
       item.item_tags.build(tag: tag)
     end
+    item.tags.build
     item
   end
 

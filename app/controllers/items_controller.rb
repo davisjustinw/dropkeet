@@ -23,7 +23,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:name, item_tags_attributes: [:id, :_destroy, :item_id, :tag_id])
+    params.require(:item).permit(:name, item_tags_attributes: [:id, :_destroy, :item_id, :tag_id], tags_attributes: [:label])
   end
 
 end
