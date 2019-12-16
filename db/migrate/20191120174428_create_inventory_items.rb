@@ -3,7 +3,6 @@ class CreateInventoryItems < ActiveRecord::Migration[6.0]
     create_table :inventory_items do |t|
       t.integer :inventory_id
       t.integer :item_id
-
       t.timestamps
     end
   end

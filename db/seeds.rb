@@ -17,7 +17,7 @@ else
   puts 'No /lib/seeds/items.csv present'
 end
 
-puts "There are now #{Inventory.count} rows in the Location table"
+puts "There are now #{Inventory.count} rows in the Inventory table"
 
 #build items
 csv_path = Pathname( Rails.root.join('lib', 'seeds', 'items.csv') )
@@ -33,26 +33,18 @@ if csv_path.exist?
     i.name = row['name']
     i.save
 
-    category, value = row['tag_hash'].split(':')
-    hash_tag = HashTag.find_or_create_by(category: category, value: value)
-    i.hash_tags << hash_tag if hash_tag
 
-    tag = HashTag.find_or_create_by(value: row['tag'])
-    i.hash_tags << tag if tag
+    tag = Tag.find_or_create_by(label: row['tag_hash'])
+    i.tags << tag if tag
 
-    if row['meta']
-      meta_data = row['meta'].split(', ')
-      meta_data.each do |meta|
-        MetaTag.find_or_create_by(name: meta).tap do |tag|
-          i.meta_tags << tag
-        end
-      end
-    end
+    tag = Tag.find_or_create_by(label: row['tag'])
+    i.tags << tag if tag
+
+
   end
 else
   puts 'No /lib/seeds/items.csv present'
 end
 
 puts "There are now #{Item.count} rows in the Item table"
-puts "There are now #{HashTag.count} rows in the HashTag table"
-puts "There are now #{MetaTag.count} rows in the MetaTag table"
+puts "There are now #{Tag.count} rows in the Tag table"

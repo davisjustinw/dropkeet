@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   resources :inventories, only: [:index, :show, :edit, :new, :create]
 
-  resources :items, only: [:edit, :new, :create]
+  resources :items
 
   resources :inventory_items, only: [:index, :edit, :update, :new, :create]
 

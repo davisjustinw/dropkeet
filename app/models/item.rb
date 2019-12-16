@@ -2,11 +2,10 @@ class Item < ApplicationRecord
   has_many :inventory_items
   has_many :inventories, through: :inventory_items
 
-  has_many :item_hash_tags
-  has_many :hash_tags, through: :item_hash_tags
+  has_many :item_tags
+  has_many :tags, through: :item_tags
 
-  has_many :meta_templates
-  has_many :meta_tags, through: :meta_templates
+  accepts_nested_attributes_for :item_tags, :allow_destroy => true
 
   scope :sorted, -> { order(:name) }
   scope :names, -> { select(:name, :id) }

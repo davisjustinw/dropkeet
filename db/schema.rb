@@ -23,27 +23,10 @@ ActiveRecord::Schema.define(version: 2019_12_04_214111) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "entry_meta_tags", force: :cascade do |t|
-    t.integer "entry_id"
-    t.integer "meta_tag_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "value"
-  end
-
-  create_table "hash_tags", force: :cascade do |t|
-    t.string "category"
-    t.string "value"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "inventories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "slug"
-    t.index ["slug"], name: "index_inventories_on_slug", unique: true
   end
 
   create_table "inventory_items", force: :cascade do |t|
@@ -54,17 +37,9 @@ ActiveRecord::Schema.define(version: 2019_12_04_214111) do
     t.integer "par"
   end
 
-  create_table "inventory_users", force: :cascade do |t|
-    t.string "role"
-    t.integer "inventory_id"
-    t.integer "user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "item_hash_tags", force: :cascade do |t|
+  create_table "item_tags", force: :cascade do |t|
     t.integer "item_id"
-    t.integer "hash_tag_id"
+    t.integer "tag_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -76,22 +51,8 @@ ActiveRecord::Schema.define(version: 2019_12_04_214111) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "locations", force: :cascade do |t|
-    t.integer "parent_id"
-    t.integer "child_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "meta_tags", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "meta_templates", force: :cascade do |t|
-    t.integer "meta_tag_id"
-    t.integer "item_id"
+  create_table "tags", force: :cascade do |t|
+    t.string "label"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -106,20 +67,13 @@ ActiveRecord::Schema.define(version: 2019_12_04_214111) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "provider"
     t.string "uid"
-    t.boolean "admin?"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "entries", "inventory_items"
-  add_foreign_key "entry_meta_tags", "entries"
-  add_foreign_key "entry_meta_tags", "meta_tags"
   add_foreign_key "inventory_items", "inventories"
   add_foreign_key "inventory_items", "items"
-  add_foreign_key "inventory_users", "inventories"
-  add_foreign_key "inventory_users", "users"
-  add_foreign_key "item_hash_tags", "hash_tags"
-  add_foreign_key "item_hash_tags", "items"
-  add_foreign_key "meta_templates", "items"
-  add_foreign_key "meta_templates", "meta_tags"
+  add_foreign_key "item_tags", "items"
+  add_foreign_key "item_tags", "tags"
 end

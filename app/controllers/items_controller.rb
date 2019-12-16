@@ -7,26 +7,23 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
-    @meta_tags = MetaTag.all
   end
 
   def create
     @item = Item.create(item_params)
-
-    raise "fuckit"
+    redirect_to inventory_items_path
   end
 
   def update
-    raise "fuckit"
+    @item = Item.find(params[:id])
+    @item.update(item_params)
+    redirect_to inventory_items_path
   end
 
   private
 
   def item_params
-    params.require(:item).permit(:name, :meta_tag_id)
+    params.require(:item).permit(:name, item_tags_attributes: [:id, :_destroy, :item_id, :tag_id])
   end
 
-  def meta_tag_params
-    params.require(:meta_tags).permit(:ids)
-  end
 end
