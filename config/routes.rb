@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :item_meta
+  resources :meta
   resources :inventories, only: [:index, :show, :edit, :new, :create]
 
   resources :items

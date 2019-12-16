@@ -40,11 +40,21 @@ if csv_path.exist?
     tag = Tag.find_or_create_by(label: row['tag'])
     i.tags << tag if tag
 
+    if row['meta']
+      meta = row['meta'].split(', ')
+      meta.each do |metum|
+        Metum.find_or_create_by(label: metum).tap do |m|
+          i.meta << m
+        end
+      end
+    end
+
 
   end
 else
   puts 'No /lib/seeds/items.csv present'
 end
 
-puts "There are now #{Item.count} rows in the Item table"
-puts "There are now #{Tag.count} rows in the Tag table"
+puts "There are now #{Item.count} rows in the Items table"
+puts "There are now #{Tag.count} rows in the Tags table"
+puts "There are now #{Metum.count} rows in the Meta table"

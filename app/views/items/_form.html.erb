@@ -19,7 +19,25 @@
   <%= f.fields_for :tags do |fff| %>
     <div >
       <% if !fff.object.persisted? %>
-        <%= fff.label :label %>
+        <%= fff.text_field :label %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <%= f.fields_for :item_meta, sorted_meta(item.item_meta) do |ff| %>
+    <div>
+      <%= ff.check_box :_destroy,
+            {:checked => ff.object.persisted?},
+            '0', '1'
+      %>
+      <%= ff.label :_destroy, ff.object.metum.label, class: 'checkbox' %>
+        <%= ff.hidden_field :metum_id %>
+    </div>
+  <% end %>
+
+  <%= f.fields_for :meta do |fff| %>
+    <div >
+      <% if !fff.object.persisted? %>
         <%= fff.text_field :label %>
       <% end %>
     </div>
