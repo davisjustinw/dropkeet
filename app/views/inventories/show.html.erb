@@ -17,9 +17,10 @@
       </div>
     </div>
     <div>
-      <% @items.each do |item| %>
+      <% @inventory_items.each do |inventory_item| %>
         <div>
-          <%= item.name %>
+          <%= link_to inventory_item.item.name,
+            inventory_item_entries_path(inventory_item) %>
         </div>
       <% end %>
     </div>

@@ -7,7 +7,7 @@ class InventoriesController < ApplicationController
     @inventories = Inventory.sorted
     @inventory = Inventory.find(params[:id])
 
-    @items = @inventory.items
+    @inventory_items = @inventory.inventory_items
   end
 
   def edit
