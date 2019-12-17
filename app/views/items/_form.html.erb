@@ -1,50 +1,24 @@
-<%= form_for item do |f| %>
-  <div class="field">
-    <div class="control">
-      <%= f.text_field :name, class: "input is-medium" %>
-    </div>
+<div class="columns">
+  <div class="column is-8 is-offset-2">
+    <%= form_for item do |f| %>
+      <div class="columns">
+        <div class="column is-6">
+          <%= render partial: 'item_fields', locals: { f: f } %>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column">
+          <%= render partial: 'tag_fields', locals: { item: item, f: f } %>
+        </div>
+        <div class="column">
+          <%= render partial: 'metum_fields', locals: { item: item, f: f } %>
+        </div>
+      </div>
+
+      <div class="field">
+        <%= f.submit "create", class: "control button is-primary" %>
+      </div>
+    <% end %>
   </div>
-
-  <%= f.fields_for :item_tags, sorted_tags(item.item_tags) do |ff| %>
-    <div>
-      <%= ff.check_box :_destroy,
-            {:checked => ff.object.persisted?},
-            '0', '1'
-      %>
-      <%= ff.label :_destroy, ff.object.tag.label, class: 'checkbox' %>
-        <%= ff.hidden_field :tag_id %>
-    </div>
-  <% end %>
-
-  <%= f.fields_for :tags do |fff| %>
-    <div >
-      <% if !fff.object.persisted? %>
-        <%= fff.text_field :label %>
-      <% end %>
-    </div>
-  <% end %>
-
-  <%= f.fields_for :item_meta, sorted_meta(item.item_meta) do |ff| %>
-    <div>
-      <%= ff.check_box :_destroy,
-            {:checked => ff.object.persisted?},
-            '0', '1'
-      %>
-      <%= ff.label :_destroy, ff.object.metum.label, class: 'checkbox' %>
-        <%= ff.hidden_field :metum_id %>
-    </div>
-  <% end %>
-
-  <%= f.fields_for :meta do |fff| %>
-    <div >
-      <% if !fff.object.persisted? %>
-        <%= fff.text_field :label %>
-      <% end %>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.submit "create", class: "control button is-primary" %>
-  </div>
-
-<% end %>
+</div>

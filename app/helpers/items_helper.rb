@@ -9,6 +9,8 @@ module ItemsHelper
     (Metum.all - item.meta).each do |metum|
       item.item_meta.build(metum: metum)
     end
+    item.meta.build
+    
     item
   end
 
