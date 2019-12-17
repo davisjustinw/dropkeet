@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_16_180138) do
+ActiveRecord::Schema.define(version: 2019_12_17_180138) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,13 @@ ActiveRecord::Schema.define(version: 2019_12_16_180138) do
     t.integer "qty"
     t.string "unit"
     t.integer "inventory_item_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "entry_meta", force: :cascade do |t|
+    t.integer "metum_id"
+    t.integer "entry_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -85,6 +92,8 @@ ActiveRecord::Schema.define(version: 2019_12_16_180138) do
   end
 
   add_foreign_key "entries", "inventory_items"
+  add_foreign_key "entry_meta", "entries"
+  add_foreign_key "entry_meta", "meta"
   add_foreign_key "inventory_items", "inventories"
   add_foreign_key "inventory_items", "items"
   add_foreign_key "item_meta", "items"
