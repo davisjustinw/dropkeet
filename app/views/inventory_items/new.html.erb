@@ -2,7 +2,9 @@
   <%= form_with model: @inventory_item do |f| %>
     <div class="field">
       <div class="control">
-        <%= f.text_field :par, class: "input is-medium" %>
+        <%= f.text_field :par,
+          class: "input is-medium",
+          tabindex: "1" %>
       </div>
     </div>
 
@@ -10,7 +12,9 @@
     <%= f.hidden_field :item_id %>
 
     <div class="field">
-      <%= f.submit "update", class: "control button is-primary" %>
+      <%= f.submit "update",
+        class: "control button is-primary",
+        tabindex: "2" %>
     </div>
   <% end %>
 </div>

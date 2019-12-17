@@ -1,5 +1,9 @@
 <aside class="menu box">
-  <h2 class="menu-label">Locations</h2>
+  <h2 class="menu-label">Manage</h2>
+  <ul class="menu-list">
+    <%= link_to "Items", items_path %>
+  </ul>
+  <h2 class="menu-label">Inventories</h2>
   <ul class="menu-list">
     <% inventories.each do |inventory| %>
       <li>
