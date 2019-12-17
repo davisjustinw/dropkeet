@@ -1,11 +1,5 @@
 class InventoryItemsController < ApplicationController
 
-  def index
-    @inventory_items = InventoryItem.index_hash
-    @inventories = Inventory.sorted.names
-    @items = Item.sorted.names
-  end
-
   def edit
     @inventory_item = InventoryItem.find(params[:id])
   end
@@ -14,7 +8,7 @@ class InventoryItemsController < ApplicationController
     @inventory_item = InventoryItem.find(params[:id])
     @inventory_item.update(inventory_item_params)
 
-    redirect_to inventory_items_path
+    redirect_to items_path
   end
 
   def new
@@ -24,7 +18,7 @@ class InventoryItemsController < ApplicationController
 
   def create
     @inventory_item = InventoryItem.create(inventory_item_params)
-    redirect_to inventory_items_path
+    redirect_to items_path
   end
 
   private
