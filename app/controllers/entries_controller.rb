@@ -3,6 +3,8 @@ class EntriesController < ApplicationController
     if params[:inventory_item_id]
       @inventory_item = InventoryItem.find(params[:inventory_item_id])
       @entries = @inventory_item.entries
+      @meta =  @inventory_item.item.meta
+      @entry_meta = EntryMetum.index_hash
     else
       @entries = Entry.all
     end
@@ -26,6 +28,5 @@ class EntriesController < ApplicationController
       :qty,
       :inventory_item_id,
       entry_meta_attributes: [:id, :value, :entry_id, :metum_id])
-
   end
 end

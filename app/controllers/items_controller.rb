@@ -16,7 +16,6 @@ class ItemsController < ApplicationController
   end
 
   def create
-    raise "wee"
     @item = Item.create(item_params)
     redirect_to items_path
   end

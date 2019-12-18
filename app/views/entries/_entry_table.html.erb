@@ -1,0 +1,26 @@
+<div class="level-item">
+  <table class="table">
+    <thead>
+      <tr>
+        <% meta.each do |metum| %>
+          <th class="has-text-centered">
+            <%= metum.label %>
+          </th>
+        <% end %>
+        <th class="has-text-centered">qty</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% entries.each do |entry| %>
+        <tr>
+          <% meta.each do |metum| %>
+            <td class="has-text-centered">
+              <%= metum_value(@entry_meta, entry, metum)%>
+            </td>
+          <% end %>
+          <td class="has-text-centered"><%= entry.qty %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
