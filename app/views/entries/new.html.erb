@@ -20,8 +20,12 @@
 
       <div class="field">
         <%= f.submit "create", class: "control button is-dark is-outlined"  %>
+        <%= link_to "cancel",
+          inventory_item_entries_path(@inventory_item),
+          class: "control button is-outlined"
+        %>
       </div>
+      
     <% end %>
   </div>
-
 </div>
