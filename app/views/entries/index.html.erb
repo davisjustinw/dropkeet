@@ -1,0 +1,20 @@
+<div class="columns">
+  <div class="column is-8 is-offset-2">
+    <%= @inventory_item.item.name %>
+    <div class="box">
+      <% @entries.each do |entry| %>
+        <%= entry.qty %> <%= entry.unit %>
+      <% end %>
+    </div>
+    <div class="columns">
+      <div class="column is-2 is-offset-5">
+        <%= link_to "+",
+          new_inventory_item_entry_path(@inventory_item),
+          class: "button"
+        %>
+      </div>
+    </div>
+
+
+  </div>
+</div>

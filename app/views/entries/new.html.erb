@@ -1,0 +1,29 @@
+<div class="columns">
+  <div class="column is-8 is-offset-2">
+    <%= form_for setup_entry(@inventory_item, @entry) do |f| %>
+
+      <div class="field">
+        <div class="control">
+          <%= f.label :qty,  class: "label" %>
+          <%= f.text_field :qty, class: "input", autofocus: true %>
+        </div>
+      </div>
+
+      <%= f.fields_for :entry_meta, @entry.entry_meta do |ff| %>
+        <div class="field">
+          <div class="control">
+            <%= ff.label :value, ff.object.metum.label, class: "label" %>
+            <%= ff.text_field :value, class: "input" %>
+          </div>
+          <%= ff.hidden_field :metum_id %>
+        </div>
+      <% end %>
+
+      <div class="field">
+        <%= f.submit "create", class: "control button is-primary"  %>
+      </div>
+
+    <% end %>
+  </div>
+
+</div>

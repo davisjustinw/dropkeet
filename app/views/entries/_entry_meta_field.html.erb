@@ -1,0 +1,8 @@
+<%= f.fields_for :entry_meta, @entry.entry_meta do |ff| %>
+  <div class="field">
+    <div class="control">
+      <%= ff.label :value, ff.object.metum.label, class: "label" %>
+      <%= ff.text_field :value, class: "input" %>
+    </div>
+  </div>
+<% end %>
