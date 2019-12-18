@@ -1,5 +1,5 @@
 <div class="columns">
-  <div class="column is-8 is-offset-2">
+  <div class="column is-4 is-offset-4">
     <%= form_for setup_entry(@inventory_item, @entry) do |f| %>
       <div class="field">
         <div class="control">
@@ -19,7 +19,7 @@
       <% end %>
 
       <div class="field">
-        <%= f.submit "create", class: "control button is-primary"  %>
+        <%= f.submit "create", class: "control button is-dark is-outlined"  %>
       </div>
     <% end %>
   </div>
