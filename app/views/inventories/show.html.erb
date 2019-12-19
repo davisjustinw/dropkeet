@@ -1,28 +1,21 @@
-
-<div class="columns">
-  <div class="column is-narrow">
-    <%= render :partial => 'menu', :locals => { inventories: @inventories } %>
+<div class="column">
+  <div class="hero">
+    <div class="hero-body">
+      <h2 class="title"><%= @inventory.name %>
+        <%= link_to edit_inventory_path(@inventory), class: "button is-text" do %>
+          <span class="icon">
+            <i class="fas fa-edit"></i>
+          </span>
+        <% end %>
+      </h2>
+    </div>
   </div>
-
-  <div class="column">
-    <div class="hero">
-      <div class="hero-body">
-        <h2 class="title"><%= @inventory.name %>
-          <%= link_to edit_inventory_path(@inventory), class: "button is-text" do %>
-            <span class="icon">
-              <i class="fas fa-edit"></i>
-            </span>
-          <% end %>
-        </h2>
+  <div>
+    <% @inventory_items.each do |inventory_item| %>
+      <div>
+        <%= link_to inventory_item.item.name,
+          inventory_item_entries_path(inventory_item) %>
       </div>
-    </div>
-    <div>
-      <% @inventory_items.each do |inventory_item| %>
-        <div>
-          <%= link_to inventory_item.item.name,
-            inventory_item_entries_path(inventory_item) %>
-        </div>
-      <% end %>
-    </div>
+    <% end %>
   </div>
 </div>

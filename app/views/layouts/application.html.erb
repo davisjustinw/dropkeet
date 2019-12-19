@@ -16,7 +16,9 @@
         <nav class="level">
           <div class="level-left">
             <div class="level-item">
-              <h2 class="title has-text-grey">DropKeet</h2>
+              <h2 class="title has-text-grey">
+                <%= link_to "DropKeet", root_path %>
+              </h2>
             </div>
           </div>
           <div class="level-right">
@@ -30,9 +32,30 @@
         </nav>
       </div>
     </header>
-
-    <%= yield %>
-
+    <div class="columns">
+      <% if @inventories %>
+        <div class="column is-narrow">
+          <aside class="menu box">
+            <h2 class="menu-label">Manage</h2>
+            <ul class="menu-list">
+              <%= link_to "Items", items_path %>
+            </ul>
+            <h2 class="menu-label">Inventories</h2>
+            <ul class="menu-list">
+              <% @inventories.each do |inventory| %>
+                <li>
+                  <%= link_to inventory[:name], inventory_path(inventory) %>
+                </li>
+              <% end %>
+                <li>
+                  <%= link_to '+', new_inventory_path, class: "has-text-centered" %>
+                </li>
+            </ul>
+          </aside>
+        </div>
+      <% end %>
+      <%= yield %>
+    </div>
     <footer class="footer">
       <div class="level">
         <p class="level-item has-text-grey-light">
