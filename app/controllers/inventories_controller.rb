@@ -15,6 +15,12 @@ class InventoriesController < ApplicationController
     @inventory = Inventory.find(params[:id])
   end
 
+  def update
+    @inventory = Inventory.find(params[:id])
+    @inventory.update(inventory_params)
+    redirect_to inventory_path(@inventory)
+  end
+
   def new
     @inventories = Inventory.sorted
     @parent = Inventory.find(params[:parent_id]) if params[:parent_id]
