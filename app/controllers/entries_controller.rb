@@ -8,6 +8,7 @@ class EntriesController < ApplicationController
     else
       @entries = Entry.all
     end
+    @inventories = Inventory.all
   end
 
   def new
