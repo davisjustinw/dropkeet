@@ -11,8 +11,8 @@ class InventoriesController < ApplicationController
   end
 
   def edit
+    @inventories = Inventory.all
     @inventory = Inventory.find(params[:id])
-    @items = Item.all
   end
 
   def new
