@@ -17,6 +17,7 @@ class EntriesController < ApplicationController
   end
 
   def new
+    @inventories = Inventory.all
     @inventory_item = InventoryItem.find(params[:inventory_item_id])
     @entry = @inventory_item.entries.build
     @breadcrumbs = [

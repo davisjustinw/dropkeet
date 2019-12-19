@@ -1,20 +1,15 @@
-<div class="column is-4 is-offset-3">
+<% @inventory_items.each do |inventory_item| %>
   <div class="level">
-    <h2 class="title level-left"><%= @inventory.name %>
-      <%= link_to edit_inventory_path(@inventory), class: "button is-text" do %>
-        <span class="icon">
-          <i class="fas fa-edit"></i>
-        </span>
-      <% end %>
-    </h2>
+    <%= link_to inventory_item.item.name,
+      inventory_item_entries_path(inventory_item),
+      class: "level-left" %>
   </div>
+<% end %>
 
-  <% @inventory_items.each do |inventory_item| %>
-    <div class="level">
-      <%= link_to inventory_item.item.name,
-        inventory_item_entries_path(inventory_item),
-        class: "level-left" %>
-    </div>
+<div class="level">
+  <%= link_to edit_inventory_path(@inventory), class: "button is-outlined has-text-grey" do %>
+    <span class="icon">
+      <i class="fas fa-edit"></i>
+    </span>
   <% end %>
-
 </div>

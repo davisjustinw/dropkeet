@@ -1,16 +1,14 @@
 
-<div class="column">
+
   <div class="level">
     <%= render partial: 'entry_table',
       locals: {entries: @entries, meta: @meta} %>
   </div>
 
   <div class="level">
-    <div class="level-item">
-      <%= link_to "+",
-        new_inventory_item_entry_path(@inventory_item),
-        class: "button"
-      %>
-    </div>
+
+    <%= link_to "+",
+      new_inventory_item_entry_path(@inventory_item),
+      class: "button"
+    %>
   </div>
-</div>

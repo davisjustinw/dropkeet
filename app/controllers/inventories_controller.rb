@@ -6,8 +6,11 @@ class InventoriesController < ApplicationController
   def show
     @inventories = Inventory.sorted
     @inventory = Inventory.find(params[:id])
-
     @inventory_items = @inventory.inventory_items
+    @breadcrumbs = [
+      {label: 'Home', path: root_path},
+      {label: @inventory.name, path: inventory_path(@inventory)}
+    ]
   end
 
   def edit
