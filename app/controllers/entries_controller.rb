@@ -5,6 +5,11 @@ class EntriesController < ApplicationController
       @entries = @inventory_item.entries
       @meta =  @inventory_item.item.meta
       @entry_meta = EntryMetum.index_hash
+      @breadcrumbs = [
+        {label: 'Home', path: root_path},
+        {label: @inventory_item.inventory.name, path: inventory_path(@inventory_item.inventory)},
+        {label: @inventory_item.item.name, path: inventory_item_entries_path(@inventory_item)}
+      ]
     else
       @entries = Entry.all
     end
@@ -14,6 +19,12 @@ class EntriesController < ApplicationController
   def new
     @inventory_item = InventoryItem.find(params[:inventory_item_id])
     @entry = @inventory_item.entries.build
+    @breadcrumbs = [
+      {label: 'Home', path: root_path},
+      {label: @inventory_item.inventory.name, path: inventory_path(@inventory_item.inventory)},
+      {label: @inventory_item.item.name, path: inventory_item_entries_path(@inventory_item)},
+      {label: 'new', path: new_inventory_item_entry_path(@inventory_item)}
+    ]
   end
 
   def create

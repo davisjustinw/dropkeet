@@ -1,12 +1,6 @@
 
 <div class="column">
   <div class="level">
-    <h2 class="level-item title has-text-centered">
-      <%= @inventory_item.item.name %>
-    </h2>
-  </div>
-
-  <div class="level">
     <%= render partial: 'entry_table',
       locals: {entries: @entries, meta: @meta} %>
   </div>

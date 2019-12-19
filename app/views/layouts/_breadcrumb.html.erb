@@ -1,0 +1,7 @@
+<nav class="breadcrumb" aria-label="breadcrumbs">
+  <ul>
+    <% breadcrumbs.each do |crumb| %>
+      <li><%= link_to crumb[:label], crumb[:path] %></li>
+    <% end %>
+  </ul>
+</nav>

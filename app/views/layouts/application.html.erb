@@ -32,6 +32,7 @@
         </nav>
       </div>
     </header>
+
     <div class="columns">
       <% if @inventories %>
         <div class="column is-2">
@@ -54,7 +55,16 @@
           </aside>
         </div>
       <% end %>
-      <%= yield %>
+      <div class="column">
+        <% if @breadcrumbs %>
+          <div class="level">
+            <%= render partial: "layouts/breadcrumb", locals: {breadcrumbs: @breadcrumbs} %>
+          </div>
+        <% end %>
+        <div class="columns">
+          <%= yield %>
+        </div>
+      </div>
     </div>
     <footer class="footer">
       <div class="level">
