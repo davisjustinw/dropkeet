@@ -10,6 +10,7 @@
         <th class="has-text-centered">qty</th>
       </tr>
     </thead>
+
     <tbody>
       <% entries.each do |entry| %>
         <tr>
@@ -22,5 +23,12 @@
         </tr>
       <% end %>
     </tbody>
+
+    <tfoot>
+      <tr>
+        <% meta.each do |metum| %><td></td><% end %>
+        <td class="has-text-centered"><%= entries.sum(:qty) %></td>
+      </tr>
+    </tfoot>
   </table>
 </div>
