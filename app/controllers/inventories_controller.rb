@@ -16,6 +16,11 @@ class InventoriesController < ApplicationController
   def edit
     @inventories = Inventory.all
     @inventory = Inventory.find(params[:id])
+    @breadcrumbs = [
+      {label: 'Home', path: root_path},
+      {label: @inventory.name, path: inventory_path(@inventory)},
+      {label: 'Edit', path: edit_inventory_path(@inventory)}
+    ]
   end
 
   def update
@@ -28,6 +33,10 @@ class InventoriesController < ApplicationController
     @inventories = Inventory.sorted
     @parent = Inventory.find(params[:parent_id]) if params[:parent_id]
     @inventory = Inventory.new
+    @breadcrumbs = [
+      {label: 'Home', path: root_path},
+      {label: 'New Inventory', path: new_inventory_path(@inventory)}
+    ]
   end
 
   def create

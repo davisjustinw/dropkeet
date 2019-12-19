@@ -1,17 +1,14 @@
-<div class="column is-2 is-offset-3">
-
-  <%= form_for @inventory do |f| %>
-    <div class="field">
-      <div class="control">
-        <%= f.label :name, "Inventory Name", class: "label" %>
-        <%= f.text_field :name,
-          class: "input",
-          autofocus: true %>
-      </div>
+<%= form_for @inventory do |f| %>
+  <div class="field level">
+    <div class="control">
+      <%= f.label :name, "Inventory Name", class: "label" %>
+      <%= f.text_field :name,
+        class: "input",
+        autofocus: true %>
     </div>
+  </div>
 
-    <div class="field">
-      <%= f.submit "update", class: "control button is-outlined" %>
-    </div>
-  <% end %>
-</div>
+  <div class="field level">
+    <%= f.submit "update", class: "control button is-outlined" %>
+  </div>
+<% end %>
