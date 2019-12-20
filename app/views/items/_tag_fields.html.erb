@@ -1,3 +1,15 @@
+<%= f.fields_for :tags do |fff| %>
+  <div class="field">
+    <div class="control">
+      <% if !fff.object.persisted? %>
+        <%= fff.label :label, "Add Tag", class: "label" %>
+        <%= fff.text_field :label,
+          class: "input" %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+
 <%= f.fields_for :item_tags, sorted_tags(item.item_tags) do |ff| %>
   <div>
     <%= ff.check_box :_destroy,
@@ -6,17 +18,5 @@
     %>
     <%= ff.label :_destroy, ff.object.tag.label, class: 'checkbox' %>
     <%= ff.hidden_field :tag_id %>
-  </div>
-<% end %>
-
-<%= f.fields_for :tags do |fff| %>
-  <div class="field">
-    <div class="control">
-      <% if !fff.object.persisted? %>
-        <%= fff.text_field :label,
-          placeholder: "add tag",
-          class: "input" %>
-      <% end %>
-    </div>
   </div>
 <% end %>

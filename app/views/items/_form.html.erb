@@ -1,24 +1,28 @@
-<div class="columns">
-  <div class="column is-8 is-offset-2">
-    <%= form_for item do |f| %>
-      <div class="columns">
-        <div class="column is-6">
-          <%= render partial: 'item_fields', locals: { f: f } %>
-        </div>
-      </div>
 
-      <div class="columns">
-        <div class="column">
-          <%= render partial: 'tag_fields', locals: { item: item, f: f } %>
-        </div>
-        <div class="column">
-          <%= render partial: 'metum_fields', locals: { item: item, f: f } %>
-        </div>
-      </div>
-
+<%= form_for item do |f| %>
+  <div class="level">
       <div class="field">
-        <%= f.submit "create", class: "control button is-primary" %>
+        <div class="control">
+          <%= f.label :name, class: "label" do %>
+            Item Name
+          <% end %>
+          <%= f.text_field :name, class: "input" %>
+        </div>
       </div>
-    <% end %>
   </div>
-</div>
+
+  <div class="level">
+    <div class="columns">
+      <div class="column">
+        <%= render partial: 'tag_fields', locals: { item: item, f: f } %>
+      </div>
+      <div class="column">
+        <%= render partial: 'metum_fields', locals: { item: item, f: f } %>
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= f.submit "create", class: "control button is-outlined has-text-grey" %>
+  </div>
+<% end %>

@@ -12,6 +12,11 @@ class ItemsController < ApplicationController
   def edit
     @item = Item.find(params[:id])
     @inventories = Inventory.sorted.names
+    @breadcrumbs = [
+      {label: 'Home', path: root_path},
+      {label: 'Items', path: items_path},
+      {label: @item.name, path: edit_item_path(@item)}
+    ]
   end
 
   def new
