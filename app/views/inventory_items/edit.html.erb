@@ -1,17 +1,20 @@
 
-<div class="tile">
+<div class="level">
   <%= form_with model: @inventory_item,
     url: inventory_item_path,
     method: 'patch' do |f|
     %>
     <div class="field">
       <div class="control">
-        <%= f.text_field :par, class: "input is-medium" %>
+        <%= f.label :par, class: "label" %>
+        <%= f.text_field :par,
+          class: "input is-medium",
+          autofocus: true %>
       </div>
     </div>
 
     <div class="field">
-      <%= f.submit "update", class: "control button is-primary" %>
+      <%= f.submit "update", class: "control button is-outlined has-text-grey" %>
     </div>
   <% end %>
 </div>
