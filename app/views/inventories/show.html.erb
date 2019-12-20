@@ -1,13 +1,30 @@
-<% @inventory_items.each do |inventory_item| %>
-  <div class="level">
-    <%= link_to inventory_item.item.name,
-      inventory_item_entries_path(inventory_item),
-      class: "level-left" %>
-  </div>
-<% end %>
+<div class="level">
+  <table class="table is-hoverable">
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Par</th>
+        <th>Qty</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @inventory_items.each do |inventory_item| %>
+        <tr>
+          <td>
+            <%= link_to inventory_item.item.name,
+            inventory_item_entries_path(inventory_item) %>
+          </td>
+          <td><%= inventory_item.par %></td>
+          <td>qty</td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
 
 <div class="level">
-  <%= link_to 'Edit',
+  <%= link_to 'Edit Name',
     edit_inventory_path(@inventory),
     class: "button is-outlined has-text-grey"%>
 </div>

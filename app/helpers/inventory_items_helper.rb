@@ -6,7 +6,7 @@ module InventoryItemsHelper
       end
     else
       link_params = { inventory_item: { inventory_id: inventory.id, item_id: item.id } }
-      link_to new_inventory_item_path( params: link_params ), class: "button" do
+      link_to new_inventory_item_path(link_params), class: "button" do
         "+"
       end
     end

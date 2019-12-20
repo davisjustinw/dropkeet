@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :inventories, only: [:index, :show, :edit, :update, :new, :create] do
-      resources :inventory_items, only: [:show]
+      resources :inventory_items, only: [:show, :new, :create]
   end
 
   resources :items, only: [:index, :new, :create, :edit, :update]
