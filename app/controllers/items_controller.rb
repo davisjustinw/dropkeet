@@ -1,5 +1,4 @@
 class ItemsController < ApplicationController
-
   def index
     @inventory_items = InventoryItem.index_hash
     @inventories = Inventory.sorted.names
@@ -12,11 +11,16 @@ class ItemsController < ApplicationController
 
   def edit
     @item = Item.find(params[:id])
-    @inventories = Inventory.sorted
+    @inventories = Inventory.sorted.names
   end
 
   def new
     @item = Item.new
+    @inventories = Inventory.sorted.names
+    @breadcrumbs = [
+      {label: 'Home', path: root_path},
+      {label: 'New Item', path: new_item_path}
+    ]
   end
 
   def create
@@ -31,7 +35,6 @@ class ItemsController < ApplicationController
   end
 
   private
-
   def item_params
     params.require(:item).permit(:name,
       item_tags_attributes: [:id, :_destroy, :item_id, :tag_id],
@@ -39,5 +42,4 @@ class ItemsController < ApplicationController
       item_meta_attributes: [:id, :_destroy, :item_id, :metum_id],
       meta_attributes: [:label])
   end
-
 end

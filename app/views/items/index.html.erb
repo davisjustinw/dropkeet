@@ -1,6 +1,5 @@
 
 <table class="table is-hoverable">
-
   <%= render partial: 'table_head',
     locals: { inventories: @inventories } %>
 
@@ -9,14 +8,15 @@
       <td class="has-text-centered">
         <%= link_to '+', new_item_path, class: "button" %>
       </td>
+
       <% @inventories.counted.times do %>
-      <td></td>
+        <td></td>
       <% end %>
     </tr>
+
     <% @items.each do |item| %>
       <%= render partial: 'body_row',
         locals: { item: item  } %>
     <% end %>
   </tbody>
-
 </table>
