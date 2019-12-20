@@ -6,6 +6,7 @@ class Inventory < ApplicationRecord
   scope :sorted, -> { order(:name) }
   scope :names, -> { select(:name, :id) }
   scope :all_ids, -> { pluck :id }
+  scope :counted, -> { count(:id) }
 
   def abbreviate
     name.delete("aeiou")

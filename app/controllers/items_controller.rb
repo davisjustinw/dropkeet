@@ -4,6 +4,10 @@ class ItemsController < ApplicationController
     @inventory_items = InventoryItem.index_hash
     @inventories = Inventory.sorted.names
     @items = Item.sorted.names
+    @breadcrumbs = [
+      {label: 'Home', path: root_path},
+      {label: 'Items', path: items_path}
+    ]
   end
 
   def edit

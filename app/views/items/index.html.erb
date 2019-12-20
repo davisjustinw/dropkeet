@@ -1,15 +1,18 @@
 
-<div class="level">
-  <div class="level-item">
-    <%= link_to '+', new_item_path, class: "button" %>
-  </div>
-</div>
-<table class="table is-hoverable is-narrow">
+<table class="table is-hoverable">
 
   <%= render partial: 'table_head',
     locals: { inventories: @inventories } %>
 
   <tbody>
+    <tr>
+      <td class="has-text-centered">
+        <%= link_to '+', new_item_path, class: "button" %>
+      </td>
+      <% @inventories.counted.times do %>
+      <td></td>
+      <% end %>
+    </tr>
     <% @items.each do |item| %>
       <%= render partial: 'body_row',
         locals: { item: item  } %>
