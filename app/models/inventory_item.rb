@@ -20,4 +20,8 @@ class InventoryItem < ApplicationRecord
       hash
     end
   end
+
+  def sum_entries
+    entries.sum(:qty)
+  end
 end
