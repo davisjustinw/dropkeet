@@ -5,7 +5,7 @@ require 'csv'
 csv_path = Pathname( Rails.root.join('lib', 'seeds', 'locations.csv') )
 
 if csv_path.exist?
-  puts 'Seeding Inventorys ...'
+  puts 'Seeding Inventories ...'
   csv_text = File.read csv_path
   csv = CSV.parse( csv_text, :headers => true, :encoding => 'ISO-8859-1' )
   csv.each do |row|
