@@ -1,14 +1,44 @@
+<table class="table">
+  <thead>
+    <tr>
+      <% @meta.each do |metum| %>
+        <th class="has-text-centered">
+          <%= metum.label %>
+        </th>
+      <% end %>
+      <th class="has-text-centered">qty</th>
+    </tr>
+  </thead>
 
+  <tbody>
 
-  <div class="level">
-    <%= render partial: 'entry_table',
-      locals: {entries: @entries, meta: @meta} %>
-  </div>
+    <% @entries.each do |entry| %>
+      <tr>
+        <% @meta.each do |metum| %>
+          <td class="has-text-centered">
+            <%= metum_value(@entry_meta, entry, metum)%>
+          </td>
+        <% end %>
+        <td class="has-text-centered"><%= entry.qty %></td>
+      </tr>
+    <% end %>
+    <tr>
+      <td class="has-text-centered">
+        <%= link_to "+",
+          new_inventory_item_entry_path(@inventory_item),
+          class: "button is-small"
+        %>
+      </td>
+      <% @meta.count.times do %>
+        <td></td>
+      <% end %>
+    </tr>
+  </tbody>
 
-  <div class="level">
-
-    <%= link_to "+",
-      new_inventory_item_entry_path(@inventory_item),
-      class: "button"
-    %>
-  </div>
+  <tfoot>
+    <tr>
+      <% @meta.count.times do %><td></td><% end %>
+      <td class="has-text-centered"><%= @entries.sum(:qty) %></td>
+    </tr>
+  </tfoot>
+</table>

@@ -1,266 +1,266 @@
 name,tag_hash,tag,meta
-Adult NC,category:airway,bls,
-Adult NRB,category:airway,bls,
-Ped NC/each,category:airway,bls,
-Ped NRB/each,category:airway,bls,
-Adult Ambu Bag ,category:airway,bls,
-Pediatric Ambu Bag ,category:airway,bls,
-Neonatal Ambu Bag ,category:airway,bls,
-Portable suction canister (White lid),category:airway,bls,
-Suction tubing (yankauer),category:airway,bls,
-Wall Suction canister (red),category:airway,bls,
-Wall Suction canister lid (red),category:airway,bls,
-Manual suction cartridge,category:airway,bls,
-Manual suction handle,category:airway,bls,serial
-Bulb syringe,category:airway,bls,
-OPA kit,category:airway,bls,
-Lube,category:airway,bls,
-Thomas Tube Holders,category:airway,bls,
-50ml Syringe,category:airway,bls,
-Portable O2,category:airway,bls,serial
-Oxygen bottle regulators ,category:airway,bls,serial
-AED Pads,category:cardiac/aed,bls,"serial, expiration"
-Razor,category:cardiac/aed,bls,
-Alcohol Pads (box),category:trauma,bls,
-Scissors/ trauma shears,category:trauma,bls,
-2x2s (package),category:trauma,bls,
-4x4s/each,category:trauma,bls,
-ABD Pads/each,category:trauma,bls,
-Occlusive Dressing/each,category:trauma,bls,
-Trauma Dressing/each,category:trauma,bls,
-Burn sheets/each,category:trauma,bls,
-Rolled Gauze/each,category:trauma,bls,
-Triangle Bandages/each,category:trauma,bls,
-Ped Arm Board,category:trauma,bls,
-Coban 2in,category:trauma,bls,
-Coban 3in,category:trauma,bls,
-Medical Tape,category:trauma,bls,
-Band Aids/box,category:trauma,bls,
-Hot packs,category:trauma,bls,
-Cold packs,category:trauma,bls,
-Traction Splint,category:trauma,bls,
-"Cardboard Splints - 12""",category:trauma,bls,
-"Cardboard Splints - 18""",category:trauma,bls,
-"Cardboard Splints - 24""",category:trauma,bls,
-KED,category:trauma,bls,serial
-C-Collar - Adult,category:trauma,bls,
-C-Collar - Ped,category:trauma,bls,
-Head Rolls,category:trauma,bls,
-Spider Straps,category:trauma,bls,
-Pocket Mask,category:PPE,bls,
-Emesis Bags/box,category:PPE,bls,
-Spit Hood,category:PPE,bls,
-N95 Mask/box,category:PPE,bls,"lot, expiration"
-Procedure masks/box,category:PPE,bls,
-Gowns ,category:PPE,bls,
-Safety Glasses ,category:PPE,bls,
-XS Gloves,category:PPE,bls,
-S Gloves,category:PPE,bls,
-M Gloves,category:PPE,bls,
-L Gloves,category:PPE,bls,
-XL Gloves,category:PPE,bls,
-XXL Gloves,category:PPE,bls,
-Pen Light,category:diagnostic,bls,
-Thermometer welch allen (new),category:diagnostic,bls,
-Thermometer covers welch allen/box,category:diagnostic,bls,
-Glucometer test strips/box,category:diagnostic,bls,
-Glucometer Lancets/box,category:diagnostic,bls,
-Stethescope Adult,category:diagnostic,bls,
-Stethescope Peds,category:diagnostic,bls,
-Child BP,category:diagnostic,bls,
-Small BP,category:diagnostic,bls,
-Reg. BP,category:diagnostic,bls,
-Large BP,category:diagnostic,bls,
-Pulseoximiter,category:diagnostic,bls,
-OB kit,category:obgyn,bls,
-Baby Warmer,category:obgyn,bls,
-Sterile Water,category:obgyn,bls,
-Slipp Sheet,category:stretcher equip.,bls,
-Mega Mover,category:stretcher equip.,bls,
-PediMate,category:stretcher equip.,bls,
-Soft restraints (4),category:stretcher equip.,bls,
-Epi 1:1000,category:medication,bls,"lot, expiration"
-Narcan 2mg,category:medication,bls,"lot, expiration"
-Atomizer for Narcan,category:medication,bls,"lot, expiration"
-Needles (size?),category:medication,bls,"lot, expiration"
-Glucose,category:medication,bls,"lot, expiration"
-Asprin,category:medication,bls,"lot, expiration"
-911 Forms,category:paperwork,bls,
-PCS Forms,category:paperwork,bls,
-ITA Forms,category:paperwork,bls,
-MIRS,category:paperwork,bls,
-Transfer Envelopes/box,category:paperwork,bls,
-Post Exposure,category:paperwork,bls,
-Accident Protocol,category:paperwork,bls,
-Triage Kit,category:paperwork,bls,
-Protocol Book,category:paperwork,bls,
-Hospital Book,category:paperwork,bls,
-Car wash soap,category:station supplies,bls,
-Bug remover,category:station supplies,bls,
-Car wash bucket,category:station supplies,bls,
-Car wash brushes,category:station supplies,bls,
-Mop bucket w/ mop,category:station supplies,bls,
-Rig trash bags/box,category:station supplies,bls,
-Station trash bags/box,category:station supplies,bls,
-Red bio bags/each,category:station supplies,bls,
-Sani Wipes,category:station supplies,bls,
-Bleach WIPES,category:station supplies,bls,
-409 Spray,category:station supplies,bls,
-Hand Sanitizer/each,category:station supplies,bls,
-Wall Hand Sanitizer Replacement ,category:station supplies,bls,
-Sharps Containers (large),category:station supplies,bls,
-Sharps Containers (small),category:station supplies,bls,
-Sharps Containers (dart),category:station supplies,bls,
-Paper Towels Rolls/box,category:station supplies,bls,
-Paper Towels flat (Z fold)/box,category:station supplies,bls,
-TP,category:station supplies,bls,
-Dish Sponge ea,category:station supplies,bls,
-Dish Soap,category:station supplies,bls,
-Swiffer /box,category:station supplies,bls,
-Printer paper /reem,category:station supplies,bls,
-Printer ink,category:station supplies,bls,
-Bed Pans,category:misc.,bls,
-Urinals,category:misc.,bls,
-Jump Kit,category:misc.,bls,unit number
-DEF Fluid,category:misc.,bls,
-MAD device (?),category:misc.,bls,
-Flares,category:misc.,bls,
-Batteries (AA),category:misc.,bls,
-Batteries (AAA),category:misc.,bls,
-Adult Neb Pipe,category:airway,als,
-Adult Neb w/Mask,category:airway,als,
-Ped Neb w/Mask,category:airway,als,
-Inline EtCO2 Vent,category:airway,als,
-EtCO2 NC,category:airway,als,
-Vent Tubing - Adult,category:airway,als,
-Vent Tubing - Ped,category:airway,als,
-Vent Filter ,category:airway,als,
-Vent Humidifyer,category:airway,als,
-French Caths Size 6,category:airway,als,
-French Caths Size 8,category:airway,als,
-French Caths Size 10,category:airway,als,
-French Caths Size 12,category:airway,als,
-French Caths Size 14,category:airway,als,
-French Caths Size 16,category:airway,als,
-French Caths Size 18,category:airway,als,
-NPA 12G,category:airway,als,
-NPA 14G,category:airway,als,
-NPA 16G,category:airway,als,
-NPA 18G,category:airway,als,
-NPA 20G,category:airway,als,
-NPA 22G,category:airway,als,
-NPA 24G,category:airway,als,
-NPA 26G,category:airway,als,
-NPA 28G,category:airway,als,
-NPA 30G,category:airway,als,
-NPA 32G,category:airway,als,
-NPA 34G,category:airway,als,
-NPA 36G,category:airway,als,
-SpO2 Sensors Adult,category:airway,als,
-SpO2 Sensors Pediatric,category:airway,als,
-SpO2 Sensors Infant,category:airway,als,
-SpO2 Sensor Neonate,category:airway,als,
-BiPap Mask/ small,category:airway,als,
-BiPap Mask/ med,category:airway,als,
-BiPap Mask/ large,category:airway,als,
-NS 100ml,category:iv,als,"lot, expiration"
-NS 250ml,category:iv,als,"lot, expiration"
-NS 500ml,category:iv,als,"lot, expiration"
-NS 1000ml,category:iv,als,"lot, expiration"
-Dextrose 5% 250ml,category:iv,als,"lot, expiration"
-Dextrose 5% 500ml,category:iv,als,"lot, expiration"
-Dextrose 10% 500ml,category:iv,als,"lot, expiration"
-Lactated Ringer's 1L,category:iv,als,"lot, expiration"
-Saline Flushes/box,category:iv,als,"lot, expiration"
-3-Way Stopcock,category:iv,als,"lot, expiration"
-1ml syringe,category:iv,als,"lot, expiration"
-1ml with  25G Needle,category:iv,als,"lot, expiration"
-3ml with 18g Needle/box,category:iv,als,"lot, expiration"
-10ml with 10g Needle/box,category:iv,als,"lot, expiration"
-19g Filter Needles,category:iv,als,"lot, expiration"
-18g Filter Needles,category:iv,als,"lot, expiration"
-10 drops/ml Tubing,category:iv,als,"lot, expiration"
-60 drops/ml Tubing,category:iv,als,"lot, expiration"
-Secondary IV set 10 ggts/mL,category:iv,als,"lot, expiration"
-Secondary IV set 15 ggts/mL,category:iv,als,"lot, expiration"
-Half Sets/box,category:iv,als,"lot, expiration"
-Full Sets,category:iv,als,"lot, expiration"
-IV starter kits,category:iv,als,"lot, expiration"
-Dial-A-Flow,category:iv,als,"lot, expiration"
-J loops/extension sets,category:iv,als,"lot, expiration"
-Filtered extension set,category:iv,als,"lot, expiration"
-IV Cath/Needles 14g,category:iv,als,"lot, expiration"
-IV Cath/Needles 16g,category:iv,als,"lot, expiration"
-IV Cath/Needles 18g,category:iv,als,"lot, expiration"
-IV Cath/Needles 20g,category:iv,als,"lot, expiration"
-IV Cath/Needles 22g,category:iv,als,"lot, expiration"
-IV Cath/Needles 24g,category:iv,als,"lot, expiration"
-Carpujet,category:iv,als,"lot, expiration"
-Pressure Bags,category:iv,als,"lot, expiration"
-Buretol 60ggts/mL,category:iv,als,"lot, expiration"
-Blood set,category:iv,als,"lot, expiration"
-Pacer Pads Adult >10kg,category:cardiac/aed,als,"lot, expiration"
-Pacer Pads Ped,category:cardiac/aed,als,"lot, expiration"
-Electrodes - Adult/230/each,category:cardiac/aed,als,"lot, expiration"
-Electrodes - Adult/530/each,category:cardiac/aed,als,"lot, expiration"
-Electrodes - Infant/each,category:cardiac/aed,als,"lot, expiration"
-Spare LP15 Printer Paper,category:cardiac/aed,als,"lot, expiration"
-Narc tag packs,category:medication,als,"lot, expiration"
-Adenosine 6mg,category:medication,als,"lot, expiration"
-Albuterol Nebs,category:medication,als,"lot, expiration"
-Amiodarone 150mg/3ml,category:medication,als,"lot, expiration"
-Aspirin bottle 81mg,category:medication,als,"lot, expiration"
-Atropine 1mg,category:medication,als,"lot, expiration"
-Atrovent Nebs,category:medication,als,"lot, expiration"
-Calcium Chloride 1g/10ml,category:medication,als,"lot, expiration"
-Calcium Gluconate 100mg/10ml,category:medication,als,"lot, expiration"
-Dopamine gtt 400mg/500ml,category:medication,als,"lot, expiration"
-Dextrose 2.5gm,category:medication,als,"lot, expiration"
-Dextrose 25gm,category:medication,als,"lot, expiration"
-Diltiazem vial 25mg/5ml,category:medication,als,"lot, expiration"
-Diphenhydramine 50mg,category:medication,als,"lot, expiration"
-Epinephrine vial 1:1000,category:medication,als,"lot, expiration"
-"Epinephrine 1:10,000 1mg",category:medication,als,"lot, expiration"
-Hydralazine 20mg/ml,category:medication,als,"lot, expiration"
-Labetolol 100mg/20ml,category:medication,als,"lot, expiration"
-Levophed 4mg/4 ml,category:medication,als,"lot, expiration"
-Lidocaine 100mg,category:medication,als,"lot, expiration"
-Lidocaine gtts,category:medication,als,"lot, expiration"
-Lidocaine 2% MDV,category:medication,als,"lot, expiration"
-Mag Sulfate vial 5gms,category:medication,als,"lot, expiration"
-Metoprolol vial 5mg/5ml,category:medication,als,"lot, expiration"
-NaCl Inhalation Pack 3ml,category:medication,als,"lot, expiration"
-Naloxone 2mg/2ml,category:medication,als,"lot, expiration"
-Nitropaste paste,category:medication,als,"lot, expiration"
-NTG SL bottle,category:medication,als,"lot, expiration"
-Oral Glucose,category:medication,als,"lot, expiration"
-Phenergan 25mg,category:medication,als,"lot, expiration"
-Procainamide 500mg,category:medication,als,"lot, expiration"
-Propofol vial,category:medication,als,"lot, expiration"
-Racemic Epinephrine,category:medication,als,"lot, expiration"
-Sodium Bicarb 5mEq,category:medication,als,"lot, expiration"
-Sodium Bicarb. 50meq,category:medication,als,"lot, expiration"
-Solumedrol 125 mg,category:medication,als,"lot, expiration"
-Sterile H2O vial,category:medication,als,"lot, expiration"
-Vecuronium 10 mg,category:medication,als,"lot, expiration"
-Zofran vial 4mg,category:medication,als,"lot, expiration"
-Ativan,category:narcotics,als,"lot, expiration"
-Ketamine,category:narcotics,als,"lot, expiration"
-Versed,category:narcotics,als,"lot, expiration"
-Dilaudid,category:narcotics,als,"lot, expiration"
-Fentanyl,category:narcotics,als,"lot, expiration"
-Morphine,category:narcotics,als,"lot, expiration"
-Propofol vial,category:station drugs,als,"lot, expiration"
-Dextrose 50%,category:station drugs,als,"lot, expiration"
-"Epinephrine 1:10,000 1mg",category:station drugs,als,"lot, expiration"
-Labetalol 100mg/20mL,category:station drugs,als,"lot, expiration"
-Albuterol 2.5mg/3mL (each),category:station drugs,als,"lot, expiration"
-Ipratropium 0.5mg/2.5mL,category:station drugs,als,"lot, expiration"
-Nirtostat 0.4mg/tab,category:station drugs,als,"lot, expiration"
-Ondansetron 4mg/2mL,category:station drugs,als,"lot, expiration"
-Amiodarone 150mg/3ml,category:station drugs,als,"lot, expiration"
-Hydralazine 20mg/ml,category:station drugs,als,"lot, expiration"
-Promethazine 25mg/mL,category:station drugs,als,"lot, expiration"
-Metoprolol vial 5mg/5ml,category:station drugs,als,"lot, expiration"
-Diphenhydramine 50mg/mL,category:station drugs,als,"lot, expiration"
-"Epinephrine 1:1,000 1mg/1mL",category:station drugs,als,"lot, expiration"
+Adult NC,airway,bls,
+Adult NRB,airway,bls,
+Ped NC/each,airway,bls,
+Ped NRB/each,airway,bls,
+Adult Ambu Bag ,airway,bls,
+Pediatric Ambu Bag ,airway,bls,
+Neonatal Ambu Bag ,airway,bls,
+Portable suction canister (White lid),airway,bls,
+Suction tubing (yankauer),airway,bls,
+Wall Suction canister (red),airway,bls,
+Wall Suction canister lid (red),airway,bls,
+Manual suction cartridge,airway,bls,
+Manual suction handle,airway,bls,serial
+Bulb syringe,airway,bls,
+OPA kit,airway,bls,
+Lube,airway,bls,
+Thomas Tube Holders,airway,bls,
+50ml Syringe,airway,bls,
+Portable O2,airway,bls,serial
+Oxygen bottle regulators ,airway,bls,serial
+AED Pads,cardiac/aed,bls,"serial, expiration"
+Razor,cardiac/aed,bls,
+Alcohol Pads (box),trauma,bls,
+Scissors/ trauma shears,trauma,bls,
+2x2s (package),trauma,bls,
+4x4s/each,trauma,bls,
+ABD Pads/each,trauma,bls,
+Occlusive Dressing/each,trauma,bls,
+Trauma Dressing/each,trauma,bls,
+Burn sheets/each,trauma,bls,
+Rolled Gauze/each,trauma,bls,
+Triangle Bandages/each,trauma,bls,
+Ped Arm Board,trauma,bls,
+Coban 2in,trauma,bls,
+Coban 3in,trauma,bls,
+Medical Tape,trauma,bls,
+Band Aids/box,trauma,bls,
+Hot packs,trauma,bls,
+Cold packs,trauma,bls,
+Traction Splint,trauma,bls,
+"Cardboard Splints - 12""",trauma,bls,
+"Cardboard Splints - 18""",trauma,bls,
+"Cardboard Splints - 24""",trauma,bls,
+KED,trauma,bls,serial
+C-Collar - Adult,trauma,bls,
+C-Collar - Ped,trauma,bls,
+Head Rolls,trauma,bls,
+Spider Straps,trauma,bls,
+Pocket Mask,PPE,bls,
+Emesis Bags/box,PPE,bls,
+Spit Hood,PPE,bls,
+N95 Mask/box,PPE,bls,"lot, expiration"
+Procedure masks/box,PPE,bls,
+Gowns ,PPE,bls,
+Safety Glasses ,PPE,bls,
+XS Gloves,PPE,bls,
+S Gloves,PPE,bls,
+M Gloves,PPE,bls,
+L Gloves,PPE,bls,
+XL Gloves,PPE,bls,
+XXL Gloves,PPE,bls,
+Pen Light,diagnostic,bls,
+Thermometer welch allen (new),diagnostic,bls,
+Thermometer covers welch allen/box,diagnostic,bls,
+Glucometer test strips/box,diagnostic,bls,
+Glucometer Lancets/box,diagnostic,bls,
+Stethescope Adult,diagnostic,bls,
+Stethescope Peds,diagnostic,bls,
+Child BP,diagnostic,bls,
+Small BP,diagnostic,bls,
+Reg. BP,diagnostic,bls,
+Large BP,diagnostic,bls,
+Pulseoximiter,diagnostic,bls,
+OB kit,obgyn,bls,
+Baby Warmer,obgyn,bls,
+Sterile Water,obgyn,bls,
+Slipp Sheet,stretcher equip.,bls,
+Mega Mover,stretcher equip.,bls,
+PediMate,stretcher equip.,bls,
+Soft restraints (4),stretcher equip.,bls,
+Epi 1:1000,medication,bls,"lot, expiration"
+Narcan 2mg,medication,bls,"lot, expiration"
+Atomizer for Narcan,medication,bls,"lot, expiration"
+Needles (size?),medication,bls,"lot, expiration"
+Glucose,medication,bls,"lot, expiration"
+Asprin,medication,bls,"lot, expiration"
+911 Forms,paperwork,bls,
+PCS Forms,paperwork,bls,
+ITA Forms,paperwork,bls,
+MIRS,paperwork,bls,
+Transfer Envelopes/box,paperwork,bls,
+Post Exposure,paperwork,bls,
+Accident Protocol,paperwork,bls,
+Triage Kit,paperwork,bls,
+Protocol Book,paperwork,bls,
+Hospital Book,paperwork,bls,
+Car wash soap,station supplies,bls,
+Bug remover,station supplies,bls,
+Car wash bucket,station supplies,bls,
+Car wash brushes,station supplies,bls,
+Mop bucket w/ mop,station supplies,bls,
+Rig trash bags/box,station supplies,bls,
+Station trash bags/box,station supplies,bls,
+Red bio bags/each,station supplies,bls,
+Sani Wipes,station supplies,bls,
+Bleach WIPES,station supplies,bls,
+409 Spray,station supplies,bls,
+Hand Sanitizer/each,station supplies,bls,
+Wall Hand Sanitizer Replacement ,station supplies,bls,
+Sharps Containers (large),station supplies,bls,
+Sharps Containers (small),station supplies,bls,
+Sharps Containers (dart),station supplies,bls,
+Paper Towels Rolls/box,station supplies,bls,
+Paper Towels flat (Z fold)/box,station supplies,bls,
+TP,station supplies,bls,
+Dish Sponge ea,station supplies,bls,
+Dish Soap,station supplies,bls,
+Swiffer /box,station supplies,bls,
+Printer paper /reem,station supplies,bls,
+Printer ink,station supplies,bls,
+Bed Pans,misc.,bls,
+Urinals,misc.,bls,
+Jump Kit,misc.,bls,unit number
+DEF Fluid,misc.,bls,
+MAD device (?),misc.,bls,
+Flares,misc.,bls,
+Batteries (AA),misc.,bls,
+Batteries (AAA),misc.,bls,
+Adult Neb Pipe,airway,als,
+Adult Neb w/Mask,airway,als,
+Ped Neb w/Mask,airway,als,
+Inline EtCO2 Vent,airway,als,
+EtCO2 NC,airway,als,
+Vent Tubing - Adult,airway,als,
+Vent Tubing - Ped,airway,als,
+Vent Filter ,airway,als,
+Vent Humidifyer,airway,als,
+French Caths Size 6,airway,als,
+French Caths Size 8,airway,als,
+French Caths Size 10,airway,als,
+French Caths Size 12,airway,als,
+French Caths Size 14,airway,als,
+French Caths Size 16,airway,als,
+French Caths Size 18,airway,als,
+NPA 12G,airway,als,
+NPA 14G,airway,als,
+NPA 16G,airway,als,
+NPA 18G,airway,als,
+NPA 20G,airway,als,
+NPA 22G,airway,als,
+NPA 24G,airway,als,
+NPA 26G,airway,als,
+NPA 28G,airway,als,
+NPA 30G,airway,als,
+NPA 32G,airway,als,
+NPA 34G,airway,als,
+NPA 36G,airway,als,
+SpO2 Sensors Adult,airway,als,
+SpO2 Sensors Pediatric,airway,als,
+SpO2 Sensors Infant,airway,als,
+SpO2 Sensor Neonate,airway,als,
+BiPap Mask/ small,airway,als,
+BiPap Mask/ med,airway,als,
+BiPap Mask/ large,airway,als,
+NS 100ml,iv,als,"lot, expiration"
+NS 250ml,iv,als,"lot, expiration"
+NS 500ml,iv,als,"lot, expiration"
+NS 1000ml,iv,als,"lot, expiration"
+Dextrose 5% 250ml,iv,als,"lot, expiration"
+Dextrose 5% 500ml,iv,als,"lot, expiration"
+Dextrose 10% 500ml,iv,als,"lot, expiration"
+Lactated Ringer's 1L,iv,als,"lot, expiration"
+Saline Flushes/box,iv,als,"lot, expiration"
+3-Way Stopcock,iv,als,"lot, expiration"
+1ml syringe,iv,als,"lot, expiration"
+1ml with  25G Needle,iv,als,"lot, expiration"
+3ml with 18g Needle/box,iv,als,"lot, expiration"
+10ml with 10g Needle/box,iv,als,"lot, expiration"
+19g Filter Needles,iv,als,"lot, expiration"
+18g Filter Needles,iv,als,"lot, expiration"
+10 drops/ml Tubing,iv,als,"lot, expiration"
+60 drops/ml Tubing,iv,als,"lot, expiration"
+Secondary IV set 10 ggts/mL,iv,als,"lot, expiration"
+Secondary IV set 15 ggts/mL,iv,als,"lot, expiration"
+Half Sets/box,iv,als,"lot, expiration"
+Full Sets,iv,als,"lot, expiration"
+IV starter kits,iv,als,"lot, expiration"
+Dial-A-Flow,iv,als,"lot, expiration"
+J loops/extension sets,iv,als,"lot, expiration"
+Filtered extension set,iv,als,"lot, expiration"
+IV Cath/Needles 14g,iv,als,"lot, expiration"
+IV Cath/Needles 16g,iv,als,"lot, expiration"
+IV Cath/Needles 18g,iv,als,"lot, expiration"
+IV Cath/Needles 20g,iv,als,"lot, expiration"
+IV Cath/Needles 22g,iv,als,"lot, expiration"
+IV Cath/Needles 24g,iv,als,"lot, expiration"
+Carpujet,iv,als,"lot, expiration"
+Pressure Bags,iv,als,"lot, expiration"
+Buretol 60ggts/mL,iv,als,"lot, expiration"
+Blood set,iv,als,"lot, expiration"
+Pacer Pads Adult >10kg,cardiac/aed,als,"lot, expiration"
+Pacer Pads Ped,cardiac/aed,als,"lot, expiration"
+Electrodes - Adult/230/each,cardiac/aed,als,"lot, expiration"
+Electrodes - Adult/530/each,cardiac/aed,als,"lot, expiration"
+Electrodes - Infant/each,cardiac/aed,als,"lot, expiration"
+Spare LP15 Printer Paper,cardiac/aed,als,"lot, expiration"
+Narc tag packs,medication,als,"lot, expiration"
+Adenosine 6mg,medication,als,"lot, expiration"
+Albuterol Nebs,medication,als,"lot, expiration"
+Amiodarone 150mg/3ml,medication,als,"lot, expiration"
+Aspirin bottle 81mg,medication,als,"lot, expiration"
+Atropine 1mg,medication,als,"lot, expiration"
+Atrovent Nebs,medication,als,"lot, expiration"
+Calcium Chloride 1g/10ml,medication,als,"lot, expiration"
+Calcium Gluconate 100mg/10ml,medication,als,"lot, expiration"
+Dopamine gtt 400mg/500ml,medication,als,"lot, expiration"
+Dextrose 2.5gm,medication,als,"lot, expiration"
+Dextrose 25gm,medication,als,"lot, expiration"
+Diltiazem vial 25mg/5ml,medication,als,"lot, expiration"
+Diphenhydramine 50mg,medication,als,"lot, expiration"
+Epinephrine vial 1:1000,medication,als,"lot, expiration"
+"Epinephrine 1:10,000 1mg",medication,als,"lot, expiration"
+Hydralazine 20mg/ml,medication,als,"lot, expiration"
+Labetolol 100mg/20ml,medication,als,"lot, expiration"
+Levophed 4mg/4 ml,medication,als,"lot, expiration"
+Lidocaine 100mg,medication,als,"lot, expiration"
+Lidocaine gtts,medication,als,"lot, expiration"
+Lidocaine 2% MDV,medication,als,"lot, expiration"
+Mag Sulfate vial 5gms,medication,als,"lot, expiration"
+Metoprolol vial 5mg/5ml,medication,als,"lot, expiration"
+NaCl Inhalation Pack 3ml,medication,als,"lot, expiration"
+Naloxone 2mg/2ml,medication,als,"lot, expiration"
+Nitropaste paste,medication,als,"lot, expiration"
+NTG SL bottle,medication,als,"lot, expiration"
+Oral Glucose,medication,als,"lot, expiration"
+Phenergan 25mg,medication,als,"lot, expiration"
+Procainamide 500mg,medication,als,"lot, expiration"
+Propofol vial,medication,als,"lot, expiration"
+Racemic Epinephrine,medication,als,"lot, expiration"
+Sodium Bicarb 5mEq,medication,als,"lot, expiration"
+Sodium Bicarb. 50meq,medication,als,"lot, expiration"
+Solumedrol 125 mg,medication,als,"lot, expiration"
+Sterile H2O vial,medication,als,"lot, expiration"
+Vecuronium 10 mg,medication,als,"lot, expiration"
+Zofran vial 4mg,medication,als,"lot, expiration"
+Ativan,narcotics,als,"lot, expiration"
+Ketamine,narcotics,als,"lot, expiration"
+Versed,narcotics,als,"lot, expiration"
+Dilaudid,narcotics,als,"lot, expiration"
+Fentanyl,narcotics,als,"lot, expiration"
+Morphine,narcotics,als,"lot, expiration"
+Propofol vial,station drugs,als,"lot, expiration"
+Dextrose 50%,station drugs,als,"lot, expiration"
+"Epinephrine 1:10,000 1mg",station drugs,als,"lot, expiration"
+Labetalol 100mg/20mL,station drugs,als,"lot, expiration"
+Albuterol 2.5mg/3mL (each),station drugs,als,"lot, expiration"
+Ipratropium 0.5mg/2.5mL,station drugs,als,"lot, expiration"
+Nirtostat 0.4mg/tab,station drugs,als,"lot, expiration"
+Ondansetron 4mg/2mL,station drugs,als,"lot, expiration"
+Amiodarone 150mg/3ml,station drugs,als,"lot, expiration"
+Hydralazine 20mg/ml,station drugs,als,"lot, expiration"
+Promethazine 25mg/mL,station drugs,als,"lot, expiration"
+Metoprolol vial 5mg/5ml,station drugs,als,"lot, expiration"
+Diphenhydramine 50mg/mL,station drugs,als,"lot, expiration"
+"Epinephrine 1:1,000 1mg/1mL",station drugs,als,"lot, expiration"
