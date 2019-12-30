@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+
   def index
     @inventory_items = InventoryItem.index_hash
     @inventories = Inventory.sorted.names
@@ -30,7 +31,16 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.create(item_params)
-    redirect_to items_path
+    if @item.save
+      redirect_to items_path
+    else
+      @inventories = Inventory.sorted.names
+      @breadcrumbs = [
+        {label: 'Home', path: root_path},
+        {label: 'New Item', path: new_item_path}
+      ]
+      render :new
+    end
   end
 
   def update

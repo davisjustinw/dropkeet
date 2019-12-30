@@ -1,4 +1,8 @@
 module ItemsHelper
+  #couldn't get this to work
+  #def rebound_if_errors
+  #  redirect_to new_item_path(@item) if @item.errors.any?
+  #end
 
   def setup_item(item)
     (Tag.all - item.tags).each do |tag|
@@ -10,7 +14,7 @@ module ItemsHelper
       item.item_meta.build(metum: metum)
     end
     item.meta.build
-    
+
     item
   end
 

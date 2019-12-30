@@ -1,5 +1,6 @@
 
 <%= form_for item do |f| %>
+  <%= render "layouts/error_messages", object: item %>
   <div class="level">
       <div class="field">
         <div class="control">
