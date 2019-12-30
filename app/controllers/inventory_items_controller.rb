@@ -14,7 +14,18 @@ class InventoryItemsController < ApplicationController
     @inventory_item = InventoryItem.find(params[:id])
     @inventory_item.update(inventory_item_params)
 
-    redirect_to items_path
+    if @inventory_item.save
+      redirect_to items_path
+    else
+      @inventory = @inventory_item.inventory
+      @inventories = Inventory.all
+      @breadcrumbs = [
+        {label: 'Home', path: root_path},
+        {label: @inventory.name, path: inventory_path(@inventory)},
+        {label: 'New', path: new_inventory_item_path}
+      ]
+      render :edit
+    end
   end
 
   def new
@@ -30,7 +41,18 @@ class InventoryItemsController < ApplicationController
 
   def create
     @inventory_item = InventoryItem.create(inventory_item_params)
-    redirect_to items_path
+    if @inventory_item.save
+      redirect_to items_path
+    else
+      @inventory = @inventory_item.inventory
+      @inventories = Inventory.all
+      @breadcrumbs = [
+        {label: 'Home', path: root_path},
+        {label: @inventory.name, path: inventory_path(@inventory)},
+        {label: 'New', path: new_inventory_item_path}
+      ]
+      render :new
+    end
   end
 
   private

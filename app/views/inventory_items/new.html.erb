@@ -1,5 +1,6 @@
 <div class="level">
   <%= form_with model: @inventory_item do |f| %>
+    <%= render "layouts/error_messages", object: @inventory_item %>
     <div class="field">
       <div class="control">
         <%= f.label :par, class: "label" %>
@@ -13,7 +14,7 @@
     <%= f.hidden_field :item_id %>
 
     <div class="field">
-      <%= f.submit "update",
+      <%= f.submit "save",
         class: "control button is-outlined has-text-grey" %>
     </div>
   <% end %>

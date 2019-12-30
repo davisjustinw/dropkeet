@@ -4,6 +4,7 @@
     url: inventory_item_path,
     method: 'patch' do |f|
     %>
+    <%= render "layouts/error_messages", object: @inventory_item %>
     <div class="field">
       <div class="control">
         <%= f.label :par, class: "label" %>
@@ -14,7 +15,7 @@
     </div>
 
     <div class="field">
-      <%= f.submit "update", class: "control button is-outlined has-text-grey" %>
+      <%= f.submit "save", class: "control button is-outlined has-text-grey" %>
     </div>
   <% end %>
 </div>
