@@ -26,7 +26,17 @@ class InventoriesController < ApplicationController
   def update
     @inventory = Inventory.find(params[:id])
     @inventory.update(inventory_params)
-    redirect_to inventory_path(@inventory)
+    if @inventory.save
+      redirect_to inventory_path(@inventory)
+    else
+      @inventories = Inventory.sorted
+      @parent = Inventory.find(params[:parent_id]) if params[:parent_id]
+      @breadcrumbs = [
+        {label: 'Home', path: root_path},
+        {label: 'New Inventory', path: new_inventory_path(@inventory)}
+      ]
+      render :edit
+    end
   end
 
   def new
