@@ -1,5 +1,6 @@
 
 <%= form_with model: @inventory do |f| %>
+  <%= render "layouts/error_messages", object: @inventory %>
   <div class="field level">
       <div class="control">
         <%= f.label :name, class: "label" %>

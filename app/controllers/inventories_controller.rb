@@ -41,7 +41,17 @@ class InventoriesController < ApplicationController
 
   def create
     @inventory = Inventory.create(inventory_params)
-    redirect_to inventories_path
+    if @inventory.save
+      redirect_to inventories_path
+    else
+      @inventories = Inventory.sorted.names
+      @breadcrumbs = [
+        {label: 'Home', path: root_path},
+        {label: 'New Inventory', path: new_inventory_path}
+      ]
+      render :new
+    end
+
   end
 
   private
