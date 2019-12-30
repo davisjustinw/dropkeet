@@ -1,14 +1,1 @@
-<%= form_for @inventory do |f| %>
-  <div class="field level">
-    <div class="control">
-      <%= f.label :name, "Inventory Name", class: "label" %>
-      <%= f.text_field :name,
-        class: "input",
-        autofocus: true %>
-    </div>
-  </div>
-
-  <div class="field level">
-    <%= f.submit "update", class: "control button is-outlined" %>
-  </div>
-<% end %>
+<%= render "form" %>
