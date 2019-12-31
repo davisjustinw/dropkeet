@@ -6,9 +6,6 @@ class InventoryItem < ApplicationRecord
 
   validates :par, presence: true, numericality: { only_integer: true }
 
-  scope :by_item, -> (item) { where(item_id: item) }
-  scope :by_inventory, -> (inventory) { where(inventory_id: inventory)}
-  scope :all_items, -> { select(:item_id).distinct.order(:item_id) }
   scope :all_loaded, -> { includes(:item) }
 
   def self.index_hash
