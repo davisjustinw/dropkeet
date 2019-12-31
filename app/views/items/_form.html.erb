@@ -1,5 +1,5 @@
 
-<%= form_for item do |f| %>
+<%= form_with model: item do |f| %>
   <%= render "layouts/error_messages", object: item %>
   <div class="level">
       <div class="field">
