@@ -46,6 +46,38 @@ class EntriesController < ApplicationController
     end
   end
 
+  def edit
+    @inventories = Inventory.all
+    @inventory_item = InventoryItem.find(params[:inventory_item_id])
+    @entry = Entry.find(params[:id])
+    @breadcrumbs = [
+      {label: 'Home', path: root_path},
+      {label: @inventory_item.inventory.name, path: inventory_path(@inventory_item.inventory)},
+      {label: @inventory_item.item.name, path: inventory_item_entries_path(@inventory_item)},
+      {label: 'edit entry', path: edit_inventory_item_entry_path(@inventory_item)}
+    ]
+  end
+
+  def update
+    @entry = Entry.find(params[:id])
+    @inventory_item = InventoryItem.find(params[:inventory_item_id])
+    @entry.update(entry_params)
+
+    if @entry.save
+      redirect_to inventory_item_entries_path(@inventory_item)
+    else
+      @inventory = @inventory_item.inventory
+      @inventories = Inventory.all
+      @breadcrumbs = [
+        {label: 'Home', path: root_path},
+        {label: @inventory.name, path: inventory_path(@inventory)},
+        {label: 'New', path: new_inventory_item_path}
+      ]
+      render :edit
+    end
+
+  end
+
   private
 
   def entry_params

@@ -1,4 +1,4 @@
-<table class="table">
+<table class="table is-hoverable">
   <thead>
     <tr>
       <% @meta.each do |metum| %>
@@ -11,15 +11,19 @@
   </thead>
 
   <tbody>
-
     <% @entries.each do |entry| %>
       <tr>
         <% @meta.each do |metum| %>
           <td class="has-text-centered">
-            <%= metum_value(@entry_meta, entry, metum)%>
+            <%= metum_value(@entry_meta, entry, metum) %>
           </td>
         <% end %>
-        <td class="has-text-centered"><%= entry.qty %></td>
+        <td class="has-text-centered">
+          <%= link_to entry.qty,
+            edit_inventory_item_entry_path(@inventory_item, entry),
+            class: "button is-small"
+          %>
+        </td>
       </tr>
     <% end %>
     <tr>
