@@ -23,10 +23,12 @@
           </div>
           <div class="level-right">
             <p class="level-item">
-              <%= link_to('Sign Out',
-                destroy_user_session_path,
-                :class => "button is-outlined has-text-grey")
-              %>
+              <% if user_signed_in? %>
+                <%= link_to('Sign Out',
+                  destroy_user_session_path,
+                  :class => "button is-outlined has-text-grey")
+                %>
+              <%end %>
             </p>
           </div>
         </nav>
@@ -69,7 +71,7 @@
     <footer class="footer">
       <div class="level">
         <p class="level-item has-text-grey-light">
-          Copyright © 2019 Justin W. Davis. All rights reserved.
+          Justin W. Davis, 2019
         </p>
       </div>
     </footer>
