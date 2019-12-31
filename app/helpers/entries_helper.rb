@@ -1,8 +1,13 @@
 module EntriesHelper
   def setup_entry(inventory_item, entry)
     meta = inventory_item.item.meta
-    meta.each do |metum|
-      entry.entry_meta.build(metum: metum)
+
+    # Build entry_meta tags if not present (new)
+    # else skip (rejected create)
+    if entry.entry_meta.empty?
+      meta.each do |metum|
+        entry.entry_meta.build(metum: metum)
+      end
     end
     [inventory_item, entry]
   end

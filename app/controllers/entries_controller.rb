@@ -31,7 +31,19 @@ class EntriesController < ApplicationController
   def create
     @inventory_item = InventoryItem.find(params[:inventory_item_id])
     @inventory_item.entries.create(entry_params)
-    redirect_to inventory_item_entries_path @inventory_item
+    if @inventory_item.save
+      redirect_to inventory_item_entries_path @inventory_item
+    else
+      @entry = @inventory_item.entries.last
+      @inventories = Inventory.all
+      @breadcrumbs = [
+        {label: 'Home', path: root_path},
+        {label: @inventory_item.inventory.name, path: inventory_path(@inventory_item.inventory)},
+        {label: @inventory_item.item.name, path: inventory_item_entries_path(@inventory_item)},
+        {label: 'new', path: new_inventory_item_entry_path(@inventory_item)}
+      ]
+      render :new
+    end
   end
 
   private
