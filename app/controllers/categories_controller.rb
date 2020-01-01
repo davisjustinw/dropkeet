@@ -2,11 +2,19 @@ class CategoriesController < ApplicationController
   def index
     @categories = Category.sorted
     @inventories = Inventory.sorted
+    @breadcrumbs = [
+      {label: 'Home', path: root_path},
+      {label: 'Categories', path: categories_path}
+    ]
   end
 
   def new
     @category = Category.new
     @inventories = Inventory.sorted
+    @breadcrumbs = [
+      {label: 'Home', path: root_path},
+      {label: 'New Category', path: new_category_path}
+    ]
   end
 
   def create
@@ -22,6 +30,10 @@ class CategoriesController < ApplicationController
     @inventories = Inventory.sorted
     @category = Category.find(params[:id])
     @items = @category.items.sorted
+    @breadcrumbs = [
+      {label: 'Home', path: root_path},
+      {label: @category.name, path: category_path(@category)}
+    ]
   end
 
   private
