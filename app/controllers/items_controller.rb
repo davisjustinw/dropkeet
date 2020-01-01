@@ -22,7 +22,7 @@ class ItemsController < ApplicationController
   end
 
   def new
-    @categories = Category.all
+    @categories = Category.sorted
     @item = Item.new
     @inventories = Inventory.sorted.names
     @breadcrumbs = [
