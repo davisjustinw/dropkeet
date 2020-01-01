@@ -1,10 +1,12 @@
 class CategoriesController < ApplicationController
   def index
-    @categories = Category.all
+    @categories = Category.sorted
+    @inventories = Inventory.sorted
   end
 
   def new
     @category = Category.new
+    @inventories = Inventory.sorted
   end
 
   def create

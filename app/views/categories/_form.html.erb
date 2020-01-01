@@ -1,6 +1,6 @@
 <div class="level">
   <div class="level-item">
-    <%= form_with model: setup_category(@category) do |f| %>
+    <%= form_with model: @category do |f| %>
       <%= render "layouts/error_messages", object: @category %>
 
       <div class="field">
