@@ -29,8 +29,10 @@ class EntriesController < ApplicationController
   end
 
   def create
+
     @inventory_item = InventoryItem.find(params[:inventory_item_id])
     @inventory_item.entries.create(entry_params)
+    # build instead of create
     if @inventory_item.save
       redirect_to inventory_item_entries_path @inventory_item
     else

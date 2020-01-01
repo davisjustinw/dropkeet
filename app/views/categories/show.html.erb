@@ -1,0 +1,15 @@
+<div class="level">
+  <div class="level-item">
+      <%= @category.name %>
+  </div>
+</div>
+
+<div class="level">
+  <div class="level-item">
+    <ul>
+      <% @items.each do |item| %>
+        <%= item.name %>
+      <% end %>
+    </ul>
+  </div>
+</div>

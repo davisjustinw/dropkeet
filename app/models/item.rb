@@ -8,6 +8,8 @@ class Item < ApplicationRecord
   has_many :item_meta
   has_many :meta, through: :item_meta
 
+  belongs_to :category
+
   validates :name, presence: true, uniqueness: {case_sensitive: false}
 
   accepts_nested_attributes_for :item_tags, :allow_destroy => true

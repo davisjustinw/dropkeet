@@ -11,6 +11,7 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    @categories = Category.all
     @item = Item.find(params[:id])
     @inventories = Inventory.sorted.names
     @breadcrumbs = [
@@ -21,6 +22,7 @@ class ItemsController < ApplicationController
   end
 
   def new
+    @categories = Category.all
     @item = Item.new
     @inventories = Inventory.sorted.names
     @breadcrumbs = [
@@ -44,6 +46,7 @@ class ItemsController < ApplicationController
   end
 
   def update
+
     @item = Item.find(params[:id])
     @item.update(item_params)
     redirect_to items_path
@@ -51,7 +54,7 @@ class ItemsController < ApplicationController
 
   private
   def item_params
-    params.require(:item).permit(:name,
+    params.require(:item).permit(:name, :category_id,
       item_tags_attributes: [:id, :_destroy, :item_id, :tag_id],
       tags_attributes: [:label],
       item_meta_attributes: [:id, :_destroy, :item_id, :metum_id],
