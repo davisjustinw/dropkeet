@@ -19,8 +19,9 @@ class CategoriesController < ApplicationController
   end
 
   def show
+    @inventories = Inventory.sorted
     @category = Category.find(params[:id])
-    @items = @category.items
+    @items = @category.items.sorted
   end
 
   private
